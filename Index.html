@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amara — Food Inclusivity for Every Mother</title>
+<meta name="description" content="Amara is a culturally inclusive AI maternal and infant health companion for the first 1,000 days. Full nutrition tracking, cultural food library, and Flora AI — rooted in food inclusivity for every mother.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage:       #2D6B3F;
+  --sage-dk:    #1A4228;
+  --sage-md:    #3D7A52;
+  --sage-lt:    #7FB685;
+  --sage-pl:    #C8DFC9;
+  --sage-bg:    #EEF7EF;
+  --peach:      #D98060;
+  --peach-lt:   #F5C4A8;
+  --peach-bg:   #FDF0E6;
+  --gold:       #C9993A;
+  --gold-lt:    #F0D4A0;
+  --gold-bg:    #FDF4DC;
+  --rose:       #C47070;
+  --rose-bg:    #FAEAEA;
+  --sky:        #5B9FC2;
+  --sky-bg:     #E6F2FA;
+  --lav:        #8B7CC8;
+  --lav-bg:     #EDEAF7;
+  --cream:      #FDFAF5;
+  --warm:       #F5F0E8;
+  --earth:      #8B6544;
+  --charcoal:   #1A1712;
+  --slate:      #3D3A35;
+  --muted:      #6B675E;
+  --border:     #E0D8CE;
+  --font-d:     'Playfair Display', Georgia, serif;
+  --font-b:     'Jost', system-ui, sans-serif;
+  --max:        1120px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--cream);color:var(--charcoal);line-height:1.7;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;inset:0 0 auto;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(253,250,245,.9);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.s{border-bottom-color:var(--border)}
+.n-logo{font-family:var(--font-d);font-size:1.55rem;font-weight:700;color:var(--sage-dk);letter-spacing:-.01em}
+.n-links{display:flex;gap:2rem;align-items:center}
+.n-links a{font-size:.85rem;font-weight:500;color:var(--muted);letter-spacing:.02em;transition:color .2s}
+.n-links a:hover{color:var(--sage)}
+.n-cta{background:var(--sage-dk)!important;color:#fff!important;padding:.5rem 1.2rem;border-radius:100px;font-size:.82rem!important;transition:background .2s,transform .15s!important}
+.n-cta:hover{background:var(--sage-md)!important;transform:translateY(-1px)}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:grid;place-items:center;padding:6rem 2.5rem 3rem;position:relative;overflow:hidden}
+.h-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 65% 45%, #d4eedc 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 20% 80%, #f5ead8 0%, transparent 55%)}
+.h-pattern{position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle, var(--sage) 1px, transparent 1px);background-size:32px 32px}
+.hero-inner{max-width:var(--max);width:100%;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.h-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);background:var(--sage-bg);border:1px solid var(--sage-pl);padding:.35rem .9rem;border-radius:100px;margin-bottom:1.5rem}
+.h-title{font-family:var(--font-d);font-size:clamp(3rem,5.5vw,4.8rem);line-height:1.05;letter-spacing:-.03em;color:var(--charcoal);margin-bottom:1.5rem}
+.h-title span{color:var(--sage);font-style:italic}
+.h-body{font-size:1.08rem;color:var(--slate);line-height:1.75;margin-bottom:2.25rem;max-width:500px}
+.h-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;background:var(--sage-dk);color:#fff;padding:.85rem 1.85rem;border-radius:100px;font-family:var(--font-b);font-size:.92rem;font-weight:500;border:none;cursor:pointer;transition:all .2s;box-shadow:0 6px 24px rgba(26,66,40,.25);text-decoration:none}
+.btn-p:hover{background:var(--sage-md);transform:translateY(-2px);box-shadow:0 10px 32px rgba(26,66,40,.32)}
+.btn-s{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--sage-dk);padding:.85rem 1.85rem;border-radius:100px;font-family:var(--font-b);font-size:.92rem;font-weight:500;border:1.5px solid var(--sage-pl);cursor:pointer;transition:all .2s;text-decoration:none}
+.btn-s:hover{border-color:var(--sage-lt);background:var(--sage-bg)}
+
+/* Tree of Life illustration */
+.tree-wrap{position:relative;display:flex;justify-content:center;align-items:flex-end;padding-bottom:1rem}
+.tree-card{background:linear-gradient(165deg,#e8f5e9 0%,#c8f0d4 50%,#a8e4b8 100%);border-radius:2.5rem;padding:2.5rem 2rem 2rem;border:1px solid rgba(125,182,133,.3);box-shadow:0 24px 64px rgba(45,107,63,.16),0 4px 16px rgba(45,107,63,.08);width:100%;max-width:400px;overflow:hidden;position:relative}
+.t-sky{position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(180deg,#b8ddf5 0%,#d4eef8 55%,#e8f5e9 100%);border-radius:2.5rem 2.5rem 0 0}
+.t-sun{position:absolute;top:1.8rem;right:2.2rem;width:44px;height:44px;background:radial-gradient(circle,#FFE566 30%,#FFD54F 65%,transparent 100%);border-radius:50%;box-shadow:0 0 28px rgba(255,200,0,.55);animation:sun-pulse 4s ease-in-out infinite}
+@keyframes sun-pulse{0%,100%{box-shadow:0 0 28px rgba(255,200,0,.55)}50%{box-shadow:0 0 48px rgba(255,200,0,.75)}}
+.t-cloud{position:absolute;top:2rem;left:2rem;width:64px;height:24px;background:rgba(255,255,255,.85);border-radius:100px}
+.t-cloud::before{content:'';position:absolute;top:-10px;left:12px;width:32px;height:32px;background:rgba(255,255,255,.85);border-radius:50%}
+.t-cloud::after{content:'';position:absolute;top:-7px;left:28px;width:24px;height:24px;background:rgba(255,255,255,.85);border-radius:50%}
+.t-plants{position:relative;z-index:2;display:flex;justify-content:center;gap:3rem;align-items:flex-end;padding:1.8rem 0 4rem}
+.plant{display:flex;flex-direction:column;align-items:center;gap:.35rem}
+.plant svg{animation:sway 5s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+.pl{font-family:var(--font-d);font-size:.68rem;font-weight:600;color:var(--sage-dk);letter-spacing:.04em}
+.bond{position:absolute;top:42%;left:50%;transform:translateX(-50%);width:88px;z-index:3}
+.t-soil{position:absolute;bottom:2.8rem;left:0;right:0;height:78px;background:linear-gradient(180deg,#8B6544,#6B4A2A);border-radius:0 0 .5rem .5rem}
+.t-soil::before{content:'';position:absolute;top:-8px;left:0;right:0;height:16px;background:#5C8A3A;border-radius:2px}
+.t-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:.25rem}
+.t-stat{background:rgba(255,255,255,.72);backdrop-filter:blur(8px);border-radius:.75rem;padding:.55rem .4rem;text-align:center;border:1px solid rgba(255,255,255,.5)}
+.t-n{font-family:var(--font-d);font-size:1.05rem;font-weight:700;color:var(--sage-dk)}
+.t-l{font-size:.58rem;color:var(--muted);margin-top:1px;line-height:1.3}
+
+/* ── SECTION SHARED ── */
+.sec{padding:7rem 2.5rem}
+.container{max-width:var(--max);margin:0 auto}
+.s-eye{display:inline-block;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-bottom:.75rem}
+.s-title{font-family:var(--font-d);font-size:clamp(2rem,3.5vw,2.9rem);letter-spacing:-.025em;color:var(--charcoal);margin-bottom:1rem;line-height:1.15}
+.s-body{font-size:1.02rem;color:var(--slate);line-height:1.75;max-width:580px;margin-bottom:3rem}
+.rule{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
+
+/* ── NUTRITION ── */
+#nutrition{background:var(--warm)}
+.nut-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-bottom:3rem}
+.nut-card{background:var(--cream);border-radius:1rem;padding:1.5rem 1.25rem;border:1px solid var(--border);transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.nut-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;opacity:0;transition:opacity .25s}
+.nut-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.08);border-color:var(--sage-pl)}
+.nut-card:hover::after{opacity:1}
+.nc-1::after{background:var(--sage)}
+.nc-2::after{background:var(--peach)}
+.nc-3::after{background:var(--gold)}
+.nc-4::after{background:var(--rose)}
+.nc-5::after{background:var(--sky)}
+.nc-6::after{background:var(--lav)}
+.nc-7::after{background:var(--sage-lt)}
+.nc-8::after{background:var(--earth)}
+.n-icon{font-size:1.4rem;margin-bottom:.8rem}
+.n-title{font-family:var(--font-d);font-size:.98rem;font-weight:600;color:var(--charcoal);margin-bottom:.4rem}
+.n-body{font-size:.82rem;color:var(--muted);line-height:1.6}
+.nut-tagline{background:var(--sage-dk);color:#fff;border-radius:1.25rem;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.nt-left h3{font-family:var(--font-d);font-size:1.4rem;color:#fff;margin-bottom:.4rem}
+.nt-left p{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.6;max-width:500px}
+.nt-right{display:flex;flex-wrap:wrap;gap:.5rem;flex-shrink:0}
+.nt-pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.88);font-size:.75rem;padding:.3rem .8rem;border-radius:100px;white-space:nowrap}
+
+/* ── CULTURE ── */
+#culture{background:var(--sage-dk);position:relative;overflow:hidden}
+#culture::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 50%,rgba(125,182,133,.2) 0%,transparent 60%);pointer-events:none}
+.cult-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.c-eye{color:var(--sage-pl)}
+.c-title{color:#fff}
+.c-body{color:rgba(255,255,255,.72);font-size:1.02rem;line-height:1.75;margin-bottom:1.5rem}
+.c-quote{border-left:3px solid var(--sage-lt);padding-left:1.5rem;margin:1.75rem 0}
+.c-quote p{font-family:var(--font-d);font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.6}
+.c-quote cite{display:block;font-size:.78rem;color:var(--sage-pl);margin-top:.4rem;font-style:normal}
+.food-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.fp{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:.85rem;padding:.85rem 1rem;transition:all .2s}
+.fp:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)}
+.fp-lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sage-pl);margin-bottom:.3rem;font-weight:500}
+.fp-foods{font-size:.82rem;color:rgba(255,255,255,.82);line-height:1.5}
+.fp-note{font-size:.7rem;color:var(--sage-lt);margin-top:.25rem;font-style:italic}
+
+/* ── FEATURES ── */
+#features{background:var(--cream)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.feat-card{background:var(--warm);border-radius:1.25rem;padding:2rem 1.75rem;border:1px solid var(--border);transition:all .25s;position:relative}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.08);border-color:var(--sage-pl);background:var(--cream)}
+.f-icon{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1.25rem}
+.fi-s{background:var(--sage-bg)}
+.fi-p{background:var(--peach-bg)}
+.fi-r{background:var(--rose-bg)}
+.fi-g{background:var(--gold-bg)}
+.fi-k{background:var(--sky-bg)}
+.fi-l{background:var(--lav-bg)}
+.f-title{font-family:var(--font-d);font-size:1.05rem;color:var(--charcoal);margin-bottom:.5rem}
+.f-body{font-size:.86rem;color:var(--muted);line-height:1.65}
+
+/* ── MISSION ── */
+#mission{background:var(--warm)}
+.miss-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.m-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.m-stat{background:var(--cream);border-radius:1rem;padding:1.5rem;border:1px solid var(--border)}
+.m-n{font-family:var(--font-d);font-size:2.1rem;font-weight:700;color:var(--sage-dk);line-height:1;margin-bottom:.3rem}
+.m-l{font-size:.82rem;color:var(--muted);line-height:1.45}
+.m-src{font-size:.68rem;color:var(--sage-pl);margin-top:.2rem}
+.m-vals{display:flex;flex-direction:column;gap:1.25rem}
+.m-val{display:flex;gap:1.2rem;align-items:flex-start;padding:1.25rem;border-radius:1rem;border:1px solid var(--border);background:var(--cream);transition:all .2s}
+.m-val:hover{border-color:var(--sage-pl);transform:translateX(5px)}
+.mv-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.mv-t{font-family:var(--font-d);font-size:.98rem;color:var(--charcoal);margin-bottom:.25rem}
+.mv-b{font-size:.84rem;color:var(--muted);line-height:1.6}
+
+/* ── FOUNDERS ── */
+#founders{background:var(--cream)}
+.found-intro{text-align:center;max-width:620px;margin:0 auto 4rem}
+.found-intro .s-body{margin:0 auto}
+.founders-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:860px;margin:0 auto}
+.f-card{background:var(--warm);border-radius:1.75rem;overflow:hidden;border:1px solid var(--border);transition:all .25s}
+.f-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(0,0,0,.09)}
+.fc-photo{width:100%;height:280px;object-fit:cover;background:var(--sage-bg);display:block}
+.fc-photo-ph{width:100%;height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(145deg,var(--sage-bg),var(--sage-pl));position:relative;overflow:hidden}
+.fc-photo-ph::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 110%,rgba(45,107,63,.15) 0%,transparent 70%)}
+.fc-ph-icon{font-size:5rem;line-height:1;position:relative;z-index:1}
+.fc-ph-inst{font-size:.72rem;color:var(--sage);letter-spacing:.06em;text-transform:uppercase;position:relative;z-index:1;text-align:center;padding:0 1rem;border:1px dashed var(--sage-pl);border-radius:100px;padding:.3rem .9rem}
+.fc-body{padding:2rem}
+.fc-name{font-family:var(--font-d);font-size:1.4rem;color:var(--charcoal);margin-bottom:.2rem}
+.fc-role{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sage);font-weight:500;margin-bottom:1rem}
+.fc-bio{font-size:.88rem;color:var(--muted);line-height:1.68;margin-bottom:1.25rem}
+.fc-food{display:inline-flex;align-items:center;gap:.4rem;font-size:.76rem;background:var(--sage-bg);color:var(--sage-dk);padding:.3rem .8rem;border-radius:100px;border:1px solid var(--sage-pl);margin-bottom:.5rem}
+/* How to add photo instruction */
+.photo-note{background:var(--sage-dk);color:rgba(255,255,255,.9);font-size:.75rem;padding:.6rem 1rem;text-align:center;line-height:1.5}
+
+/* ── WAITLIST ── */
+#waitlist{background:var(--sage-dk);position:relative;overflow:hidden}
+#waitlist::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(125,182,133,.2) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(201,153,58,.12) 0%,transparent 45%);pointer-events:none}
+.wl-inner{max-width:560px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.wl-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem}
+.wl-body{color:rgba(255,255,255,.7);font-size:1.02rem;line-height:1.75;margin-bottom:2.5rem}
+.wl-form{display:flex;gap:.75rem;max-width:420px;margin:0 auto 1.25rem}
+.wl-in{flex:1;padding:.9rem 1.25rem;border-radius:100px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;font-family:var(--font-b);font-size:.9rem;outline:none;transition:all .2s;backdrop-filter:blur(8px)}
+.wl-in::placeholder{color:rgba(255,255,255,.4)}
+.wl-in:focus{border-color:var(--sage-pl);background:rgba(255,255,255,.15)}
+.wl-btn{padding:.9rem 1.5rem;border-radius:100px;border:none;background:#fff;color:var(--sage-dk);font-family:var(--font-b);font-size:.88rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .2s}
+.wl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.wl-note{font-size:.75rem;color:rgba(255,255,255,.42);margin-bottom:2rem}
+.wl-ok{display:none;font-family:var(--font-d);font-style:italic;color:var(--sage-pl);font-size:1.1rem;padding:1rem}
+.wl-links{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap}
+.wl-lnk{display:inline-flex;align-items:center;gap:.4rem;color:rgba(255,255,255,.6);font-size:.84rem;font-weight:500;padding:.55rem 1.2rem;border-radius:100px;border:1px solid rgba(255,255,255,.18);transition:all .2s;text-decoration:none}
+.wl-lnk:hover{color:#fff;border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.08)}
+
+/* ── CONTACT ── */
+#contact{background:var(--cream)}
+.con-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.con-form{display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.4rem}
+.fl{font-size:.78rem;font-weight:500;color:var(--charcoal);letter-spacing:.02em}
+.fi,.ft,.fs{padding:.78rem 1rem;border-radius:.75rem;border:1.5px solid var(--border);background:var(--warm);font-family:var(--font-b);font-size:.88rem;color:var(--charcoal);outline:none;transition:border-color .2s}
+.fi:focus,.ft:focus,.fs:focus{border-color:var(--sage-lt);background:#fff}
+.ft{resize:vertical;min-height:120px}
+.f-sub{align-self:flex-start;padding:.82rem 1.85rem;border-radius:100px;border:none;background:var(--sage-dk);color:#fff;font-family:var(--font-b);font-size:.9rem;font-weight:500;cursor:pointer;transition:all .2s}
+.f-sub:hover{background:var(--sage-md);transform:translateY(-1px)}
+.con-info h3{font-family:var(--font-d);font-size:1.5rem;color:var(--charcoal);margin-bottom:.75rem}
+.con-info p{color:var(--muted);font-size:.92rem;line-height:1.72;margin-bottom:2rem}
+.cc{display:flex;flex-direction:column;gap:.75rem}
+.c-card{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--warm);border-radius:1rem;border:1px solid var(--border);transition:border-color .2s}
+.c-card:hover{border-color:var(--sage-pl)}
+.c-ic{font-size:1.15rem;width:34px;text-align:center}
+.c-lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--sage);font-weight:500;margin-bottom:.1rem}
+.c-val{font-size:.88rem;color:var(--charcoal)}
+
+/* ── FOOTER ── */
+footer{background:var(--charcoal);padding:2.5rem;text-align:center}
+.ft-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.ft-logo{font-family:var(--font-d);font-size:1.2rem;color:rgba(255,255,255,.7)}
+.ft-links{display:flex;gap:2rem}
+.ft-links a{font-size:.82rem;color:rgba(255,255,255,.42);transition:color .2s;text-decoration:none}
+.ft-links a:hover{color:rgba(255,255,255,.8)}
+.ft-copy{font-size:.78rem;color:rgba(255,255,255,.35)}
+
+/* ── ANIMATIONS ── */
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.18s}.d3{transition-delay:.26s}
+.d4{transition-delay:.34s}.d5{transition-delay:.42s}.d6{transition-delay:.5s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero-inner,.cult-inner,.miss-inner,.con-inner{grid-template-columns:1fr;gap:2.5rem}
+  .nut-grid{grid-template-columns:repeat(2,1fr)}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .tree-wrap{order:-1}
+  .tree-card{max-width:340px;margin:0 auto}
+  .founders-grid{grid-template-columns:1fr;max-width:420px}
+  nav .n-links{display:none}
+}
+@media(max-width:600px){
+  .nut-grid,.feat-grid{grid-template-columns:1fr}
+  .m-stats{grid-template-columns:1fr 1fr}
+  .food-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .wl-form{flex-direction:column}
+  .ft-inner{flex-direction:column;text-align:center}
+  .ft-links{justify-content:center}
+  .wl-links{flex-direction:column;align-items:center}
+  .nut-tagline{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="n-logo">amara</a>
+  <div class="n-links">
+    <a href="#nutrition">Nutrition</a>
+    <a href="#culture">Our Lens</a>
+    <a href="#features">Features</a>
+    <a href="#founders">Founders</a>
+    <a href="#contact">Contact</a>
+    <a href="https://bloom-three-pi.vercel.app" target="_blank" class="n-cta">Try the app →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="h-bg"></div>
+  <div class="h-pattern"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="h-tag">Food inclusivity for every mother</div>
+      <h1 class="h-title">The first 1,000 days.<br><span>Nourished by culture.</span></h1>
+      <p class="h-body">Amara is a culturally inclusive AI companion for the first 1,000 days of a baby's life — tracking full nutrition, cultural foods, and maternal health for every mother, in every kitchen, in every culture.</p>
+      <div class="h-actions">
+        <a href="https://bloom-three-pi.vercel.app" target="_blank" class="btn-p">Open the app →</a>
+        <a href="#waitlist" class="btn-s">Join the waitlist</a>
+      </div>
+    </div>
+    <div class="tree-wrap">
+      <div class="tree-card">
+        <div class="t-sky">
+          <div class="t-sun"></div>
+          <div class="t-cloud"></div>
+        </div>
+        <div class="t-plants">
+          <!-- Mama plant (lavender flower) -->
+          <div class="plant">
+            <svg width="68" height="128" viewBox="0 0 68 128" fill="none" style="animation-duration:5.2s">
+              <path d="M34 124 C33 100 31 80 32 55 C33 38 32 22 34 8" stroke="#2D6B3F" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M32 88 C19 80 13 68 17 56 C23 70 29 80 32 88" fill="#5C8A3A" opacity=".82"/>
+              <path d="M33 73 C46 65 51 53 47 42 C41 56 37 66 33 73" fill="#4A7C2F" opacity=".88"/>
+              <path d="M32 56 C19 48 15 36 19 25 C25 38 30 48 32 56" fill="#639922" opacity=".9"/>
+              <path d="M33 40 C45 32 49 20 45 10 C39 22 36 32 33 40" fill="#5C8A3A" opacity=".82"/>
+              <ellipse cx="27" cy="8" rx="7" ry="5" fill="#C8A4E0" opacity=".9" transform="rotate(-22,27,8)"/>
+              <ellipse cx="34" cy="5" rx="7.5" ry="5" fill="#D4B4EC" opacity=".9"/>
+              <ellipse cx="41" cy="8" rx="7" ry="5" fill="#C8A4E0" opacity=".9" transform="rotate(22,41,8)"/>
+              <circle cx="34" cy="8" r="5" fill="#EF9F27"/>
+            </svg>
+            <span class="pl">Mother</span>
+          </div>
+          <!-- Animated bond -->
+          <svg class="bond" viewBox="0 0 88 20" fill="none">
+            <path d="M0 10 Q22 2 44 10 Q66 18 88 10" stroke="#7FFFD4" stroke-width="2.5" stroke-dasharray="4 3">
+              <animate attributeName="stroke-dashoffset" values="0;-28" dur="2s" repeatCount="indefinite"/>
+            </path>
+          </svg>
+          <!-- Baby plant (gold flower) -->
+          <div class="plant">
+            <svg width="58" height="98" viewBox="0 0 58 98" fill="none" style="animation-duration:4s;animation-delay:-.8s">
+              <path d="M29 96 C28 76 27 58 28 40 C29 26 28 14 29 4" stroke="#2D6B3F" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M28 76 C17 68 12 58 16 48 C21 60 26 70 28 76" fill="#639922" opacity=".82"/>
+              <path d="M29 61 C40 53 44 43 40 34 C35 45 32 55 29 61" fill="#5C8A3A" opacity=".88"/>
+              <path d="M28 46 C17 38 14 28 18 19 C23 30 27 40 28 46" fill="#7AB648" opacity=".9"/>
+              <ellipse cx="23" cy="5" rx="6.5" ry="4.5" fill="#FFD580" opacity=".9" transform="rotate(-22,23,5)"/>
+              <ellipse cx="29" cy="3" rx="6.5" ry="4.5" fill="#FFE566" opacity=".9"/>
+              <ellipse cx="35" cy="5" rx="6.5" ry="4.5" fill="#FFD580" opacity=".9" transform="rotate(22,35,5)"/>
+              <circle cx="29" cy="6" r="4.5" fill="#EF9F27"/>
+            </svg>
+            <span class="pl">Baby</span>
+          </div>
+        </div>
+        <div class="t-soil"></div>
+        <div class="t-stats">
+          <div class="t-stat"><div class="t-n">1,000</div><div class="t-l">Critical days</div></div>
+          <div class="t-stat"><div class="t-n">Full</div><div class="t-l">Nutrition profile</div></div>
+          <div class="t-stat"><div class="t-n">6+</div><div class="t-l">Cultural cuisines</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- NUTRITION -->
+<section id="nutrition" class="sec">
+  <div class="container">
+    <span class="s-eye fade">Full nutritional intelligence</span>
+    <h2 class="s-title fade d1">We track everything.<br>Not just the obvious.</h2>
+    <p class="s-body fade d2">Most apps track calories. Amara tracks your complete nutritional picture — macronutrients, micronutrients, and the cultural foods that matter most to you and your baby.</p>
+
+    <div class="nut-grid">
+      <div class="nut-card nc-1 fade d1">
+        <div class="n-icon">🔥</div>
+        <div class="n-title">Macronutrients</div>
+        <p class="n-body">Total calories, carbohydrates, protein, and fats — tracked per meal and per day, benchmarked to pregnancy and postpartum requirements.</p>
+      </div>
+      <div class="nut-card nc-2 fade d2">
+        <div class="n-icon">🫀</div>
+        <div class="n-title">Iron</div>
+        <p class="n-body">Blood volume doubles during pregnancy. Amara tracks iron daily and suggests culturally familiar iron-rich foods — not just spinach and red meat.</p>
+      </div>
+      <div class="nut-card nc-3 fade d3">
+        <div class="n-icon">🧬</div>
+        <div class="n-title">Folate & B12</div>
+        <p class="n-body">Critical for neural tube development in the first trimester. Amara flags gaps and connects them to foods from your own cultural tradition.</p>
+      </div>
+      <div class="nut-card nc-4 fade d4">
+        <div class="n-icon">🦴</div>
+        <div class="n-title">Calcium</div>
+        <p class="n-body">Essential for bone and teeth development. Tracked across dairy and non-dairy sources — including plant-based and cultural alternatives.</p>
+      </div>
+      <div class="nut-card nc-5 fade d5">
+        <div class="n-icon">☀️</div>
+        <div class="n-title">Vitamin D</div>
+        <p class="n-body">Supports immune function and calcium absorption. Often deficient. Amara surfaces vitamin D gaps and connects them to practical food sources.</p>
+      </div>
+      <div class="nut-card nc-6 fade d6">
+        <div class="n-icon">🐟</div>
+        <div class="n-title">Omega-3</div>
+        <p class="n-body">Essential for fetal brain and eye development. Amara tracks omega-3 across cultural food sources — including fish preparations common in non-Western cuisines.</p>
+      </div>
+      <div class="nut-card nc-7 fade d1">
+        <div class="n-icon">💧</div>
+        <div class="n-title">Hydration</div>
+        <p class="n-body">Blood volume expands significantly during pregnancy. Daily water intake is tracked and adjusted for trimester and postpartum stage.</p>
+      </div>
+      <div class="nut-card nc-8 fade d2">
+        <div class="n-icon">🌿</div>
+        <div class="n-title">Cultural food library</div>
+        <p class="n-body">A growing database of Black American Southern, West African, Caribbean, South Asian, Latin American, and East Asian foods — each with full nutritional profiles.</p>
+      </div>
+    </div>
+
+    <div class="nut-tagline fade">
+      <div class="nt-left">
+        <h3>Food inclusivity is not a feature. It is the foundation.</h3>
+        <p>Every food in Amara's database is mapped to its full nutritional profile. When a mother logs collard greens, she sees its folate, calcium, iron, vitamin K, and fiber — not a generic entry. That is what food inclusivity looks like.</p>
+      </div>
+      <div class="nt-right">
+        <span class="nt-pill">Macros & calories</span>
+        <span class="nt-pill">Iron & folate</span>
+        <span class="nt-pill">Calcium & vitamin D</span>
+        <span class="nt-pill">Omega-3</span>
+        <span class="nt-pill">Hydration</span>
+        <span class="nt-pill">Cultural food library</span>
+        <span class="nt-pill">6+ cuisine families</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- CULTURE -->
+<section id="culture" class="sec">
+  <div class="container">
+    <div class="cult-inner">
+      <div>
+        <span class="s-eye c-eye fade">Our cultural lens</span>
+        <h2 class="s-title c-title fade d1">The nutrition advice we received was not built for us.</h2>
+        <p class="c-body fade d2">Standard prenatal guidance centers Western foods. A mother whose kitchen centers jollof rice, dal, or callaloo receives advice that does not reflect her food — or validate it. Amara changes that.</p>
+        <div class="c-quote fade d3">
+          <p>"A friend was told by her OB: no sushi during pregnancy. But her mother had made her fish her whole childhood. Fish is an excellent source of omega-3 — essential for fetal brain development. The blanket ban created a conflict between medical advice and a lifetime of cultural knowledge."</p>
+          <cite>— The story that started Amara</cite>
+        </div>
+        <a href="https://bloom-three-pi.vercel.app" target="_blank" class="btn-p fade d4" style="display:inline-flex">See it in Amara →</a>
+      </div>
+      <div class="food-grid fade d2">
+        <div class="fp">
+          <div class="fp-lbl">Black American Southern</div>
+          <div class="fp-foods">Collard greens · Black-eyed peas · Sweet potato · Okra · Butter beans · Cornbread · Catfish</div>
+          <div class="fp-note">Collard greens: 27% daily folate + 26% calcium per cup</div>
+        </div>
+        <div class="fp">
+          <div class="fp-lbl">West African</div>
+          <div class="fp-foods">Egusi · Jollof rice · Fufu · Plantain · Ogbono · Akara · Palm nut soup · Moringa</div>
+          <div class="fp-note">Egusi seeds: iron, zinc & magnesium</div>
+        </div>
+        <div class="fp">
+          <div class="fp-lbl">Caribbean</div>
+          <div class="fp-foods">Callaloo · Ackee · Dasheen · Breadfruit · Sorrel · Peas & rice · Roti</div>
+          <div class="fp-note">Callaloo: iron, folate, calcium — a diaspora powerhouse</div>
+        </div>
+        <div class="fp">
+          <div class="fp-lbl">South Asian</div>
+          <div class="fp-foods">Lentil dal · Fenugreek · Turmeric milk · Paneer · Khichdi · Chickpea curry</div>
+          <div class="fp-note">Lentil dal: 90% daily folate per cup</div>
+        </div>
+        <div class="fp">
+          <div class="fp-lbl">Latin American</div>
+          <div class="fp-foods">Black beans · Nopales · Chayote · Arroz con pollo · Masa · Tomatillo</div>
+          <div class="fp-note">Black beans: 64% daily folate per cup</div>
+        </div>
+        <div class="fp">
+          <div class="fp-lbl">East African</div>
+          <div class="fp-foods">Mchicha · Ugali · Maharage · Tilapia · Sukuma wiki · Njahi</div>
+          <div class="fp-note">Mchicha: iron, calcium, folate — a traditional powerhouse</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- FEATURES -->
+<section id="features" class="sec">
+  <div class="container">
+    <span class="s-eye fade">Platform features</span>
+    <h2 class="s-title fade d1">Everything in one garden.</h2>
+    <p class="s-body fade d2">Six features built to work as a system — because a mother's health and her child's development are not separate outcomes.</p>
+    <div class="feat-grid">
+      <div class="feat-card fade d1">
+        <div class="f-icon fi-s">🥗</div>
+        <h3 class="f-title">Cultural nutrition tracking</h3>
+        <p class="f-body">Full macronutrient and micronutrient tracking across a growing library of culturally diverse foods. Log what you actually eat — Amara does the nutritional work.</p>
+      </div>
+      <div class="feat-card fade d2">
+        <div class="f-icon fi-p">🌿</div>
+        <h3 class="f-title">Flora AI advisor</h3>
+        <p class="f-body">Powered by Claude. Culturally fluent, available 24/7. Flora answers nutrition questions with cultural specificity and flags early warning signs of preeclampsia, PPD, and gestational diabetes.</p>
+      </div>
+      <div class="feat-card fade d3">
+        <div class="f-icon fi-k">📈</div>
+        <h3 class="f-title">Infant growth tracker</h3>
+        <p class="f-body">WHO-standard growth charts for weight, height, and head circumference. Visualize your baby's development over time against established percentile bands.</p>
+      </div>
+      <div class="feat-card fade d4">
+        <div class="f-icon fi-r">💜</div>
+        <h3 class="f-title">Maternal health screening</h3>
+        <p class="f-body">Edinburgh PPD scale, blood pressure monitoring, mood tracking, and gestational diabetes indicators. The dual garden — both plants watched, always.</p>
+      </div>
+      <div class="feat-card fade d5">
+        <div class="f-icon fi-g">🌸</div>
+        <h3 class="f-title">Milestone celebrations</h3>
+        <p class="f-body">First smile, first foods, first steps — tracked and celebrated. Each milestone makes the garden grow. Your 1,000-day journey, beautifully marked.</p>
+      </div>
+      <div class="feat-card fade d6">
+        <div class="f-icon fi-l">🔔</div>
+        <h3 class="f-title">Daily reminders</h3>
+        <p class="f-body">Gentle daily nudges personalized to your gestational week or infant's age — hydration, vitamins, nutrition logs, and wellbeing check-ins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- MISSION -->
+<section id="mission" class="sec">
+  <div class="container">
+    <div class="miss-inner">
+      <div>
+        <span class="s-eye fade">Why it matters</span>
+        <h2 class="s-title fade d1">The most critical window in human development.</h2>
+        <p class="s-body fade d2" style="margin-bottom:0">What a baby is exposed to from conception through age two shapes their brain architecture, immune function, and metabolic health for life. Nutrition is one of the most powerful levers we have — and most tools waste it on generic, culturally narrow advice.</p>
+        <div class="m-stats fade d3">
+          <div class="m-stat"><div class="m-n">3×</div><div class="m-l">Higher maternal mortality for Black women vs. white women</div><div class="m-src">CDC, 2024</div></div>
+          <div class="m-stat"><div class="m-n">95%</div><div class="m-l">Of pregnant women don't meet iron requirements from food alone</div><div class="m-src">CRN, 2024</div></div>
+          <div class="m-stat"><div class="m-n">60%</div><div class="m-l">Of immigrant mothers received no gestational weight guidance</div><div class="m-src">NIH, 2024</div></div>
+          <div class="m-stat"><div class="m-n">$2.8B</div><div class="m-l">Maternal health app market — with a cultural gap unfilled</div><div class="m-src">Emergen Research, 2025</div></div>
+        </div>
+      </div>
+      <div class="m-vals">
+        <div class="m-val fade d1"><div class="mv-icon">🌍</div><div><div class="mv-t">Culturally grounded</div><p class="mv-b">Every food suggestion, every Flora response, every reminder is shaped by the mother's cultural background — not a generic Western default. Food is culture. Amara honors that.</p></div></div>
+        <div class="m-val fade d2"><div class="mv-icon">🛡️</div><div><div class="mv-t">Clinically responsible</div><p class="mv-b">Flora is an escalation assistant — not a diagnostic tool. Every output is an action: monitor at home, call your provider, or go to the ER now. Safety over scale, always.</p></div></div>
+        <div class="m-val fade d3"><div class="mv-icon">💸</div><div><div class="mv-t">Free for mothers. Always.</div><p class="mv-b">Amara is free for the mothers who need it most. Revenue comes from health systems and payors — not users. This is non-negotiable.</p></div></div>
+        <div class="m-val fade d4"><div class="mv-icon">🔒</div><div><div class="mv-t">Private by design</div><p class="mv-b">HIPAA-compliant from day one. End-to-end encryption. No data sold. No advertising. Mothers own their data and can delete it at any time.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- FOUNDERS -->
+<section id="founders" class="sec">
+  <div class="container">
+    <div class="found-intro fade">
+      <span class="s-eye">The team</span>
+      <h2 class="s-title">Built from lived experience.</h2>
+      <p class="s-body">Amara was not built from a research paper. It was built from two kitchens, two cultures, and a shared conviction that a mother's nutritional plan should include the food she actually cooks.</p>
+    </div>
+
+    <div class="founders-grid">
+
+      <!-- ERICA -->
+      <div class="f-card fade d1">
+        <!--
+          TO ADD YOUR PHOTO:
+          Replace the div below with:
+          <img src="erica-photo.jpg" alt="Erica Stephens" class="fc-photo">
+
+          Photo tips:
+          - Use a square or portrait crop (minimum 400×280px)
+          - Place the image file in the same folder as this HTML file
+          - Good lighting, professional or natural setting
+        -->
+        <div class="fc-photo-ph">
+          <div class="fc-ph-icon">👩🏾</div>
+          <div class="fc-ph-inst">Add photo: replace this div with &lt;img src="erica.jpg"&gt;</div>
+        </div>
+        <div class="fc-body">
+          <div class="fc-name">Erica Stephens</div>
+          <div class="fc-role">Co-Founder</div>
+          <p class="fc-bio">Erica grew up eating Black Southern food — collard greens slow-cooked with smoked turkey, black-eyed peas on New Year's Day, sweet potato, butter beans. Her grandmother's kitchen was nutritious; no prenatal handout ever said so. She built Amara's technical foundation with one conviction: AI should work for the communities most often excluded from its design.</p>
+          <div class="fc-food">🌿 Black American Southern food traditions</div>
+        </div>
+      </div>
+
+      <!-- JUANITA -->
+      <div class="f-card fade d2">
+        <!--
+          TO ADD YOUR PHOTO:
+          Replace the div below with:
+          <img src="juanita-photo.jpg" alt="Juanita Julius Ndyamukama" class="fc-photo">
+        -->
+        <div class="fc-photo-ph" style="background:linear-gradient(145deg,var(--sage-bg),var(--sage-pl))">
+          <div class="fc-ph-icon">👩🏾</div>
+          <div class="fc-ph-inst">Add photo: replace this div with &lt;img src="juanita.jpg"&gt;</div>
+        </div>
+        <div class="fc-body">
+          <div class="fc-name">Juanita Julius Ndyamukama</div>
+          <div class="fc-role">Co-Founder</div>
+          <p class="fc-bio">Juanita grew up in Tanzania eating mchicha, ugali, and maharage — foods that have sustained East African mothers for generations. When she arrived in the United States and saw pregnancy nutrition materials, she saw a system built for someone else. Her nutrition expertise shaped Amara's entire food database. What she knew as nourishing, the system called other. Amara is the answer to that.</p>
+          <div class="fc-food">🌍 East African food traditions · Nutrition expertise</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="fade" style="text-align:center;margin-top:2.5rem;font-size:.82rem;color:var(--muted)">
+      Pilot launching in Baltimore, Maryland · Open to collaborators, health system partners, and research partners
+    </p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- WAITLIST -->
+<section id="waitlist" class="sec">
+  <div class="wl-inner fade">
+    <span class="s-eye" style="color:var(--sage-pl)">Be part of it</span>
+    <h2 class="wl-title">Join the waitlist.</h2>
+    <p class="wl-body">Amara is in pilot stage, recruiting our first mothers through Baltimore-area community health centers. Leave your email to be notified when broader access opens.</p>
+    <form class="wl-form" onsubmit="handleWL(event)">
+      <input type="email" class="wl-in" placeholder="Your email address" required autocomplete="email">
+      <button type="submit" class="wl-btn">Join →</button>
+    </form>
+    <div class="wl-ok" id="wl-ok">🌿 You're on the list. We'll be in touch.</div>
+    <p class="wl-note">No spam. No selling your data. Just a note when Amara is ready for you.</p>
+    <div class="wl-links">
+      <a href="https://bloom-three-pi.vercel.app" target="_blank" class="wl-lnk">🌿 Try the live app</a>
+      <a href="#contact" class="wl-lnk">✉️ Partner with us</a>
+      <a href="#founders" class="wl-lnk">👥 Meet the founders</a>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <div class="container">
+    <div class="con-inner">
+      <div>
+        <span class="s-eye fade">Get in touch</span>
+        <h2 class="s-title fade d1">Let's talk.</h2>
+        <p class="s-body fade d2" style="max-width:none">Whether you are a health system, a community health worker, a researcher, an investor, or a mother who wants to be involved in our pilot — we want to hear from you.</p>
+        <form class="con-form fade d3" onsubmit="handleCon(event)">
+          <div class="form-row">
+            <div class="fg"><label class="fl">First name</label><input type="text" class="fi" placeholder="First name" required></div>
+            <div class="fg"><label class="fl">Last name</label><input type="text" class="fi" placeholder="Last name"></div>
+          </div>
+          <div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="your@email.com" required></div>
+          <div class="fg"><label class="fl">I am a…</label>
+            <select class="fs">
+              <option>Mother / expectant mother</option>
+              <option>Healthcare provider</option>
+              <option>Health system or hospital</option>
+              <option>Researcher or academic</option>
+              <option>Investor or funder</option>
+              <option>Community health worker</option>
+              <option>Media or journalist</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Message</label><textarea class="ft" placeholder="Tell us how you'd like to connect…"></textarea></div>
+          <button type="submit" class="f-sub">Send message →</button>
+        </form>
+      </div>
+      <div class="con-info fade d2">
+        <h3>Amara is for every mother.</h3>
+        <p>We are a small team building something we believe in deeply. If you want to partner, collaborate, fund, or pilot with us — reach out. Every conversation makes Amara stronger.</p>
+        <div class="cc">
+          <div class="c-card"><div class="c-ic">🌐</div><div><div class="c-lbl">Live app</div><div class="c-val"><a href="https://bloom-three-pi.vercel.app" target="_blank" style="color:var(--sage-dk)">bloom-three-pi.vercel.app</a></div></div></div>
+          <div class="c-card"><div class="c-ic">📍</div><div><div class="c-lbl">Pilot location</div><div class="c-val">Baltimore, Maryland</div></div></div>
+          <div class="c-card"><div class="c-ic">🌱</div><div><div class="c-lbl">Pilot status</div><div class="c-val">Recruiting first 15 mothers · 90-day study</div></div></div>
+          <div class="c-card"><div class="c-ic">🤝</div><div><div class="c-lbl">Open to</div><div class="c-val">Health systems · Research partners · Investors · Community health organizations</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-logo">amara</div>
+    <div class="ft-links">
+      <a href="#nutrition">Nutrition</a>
+      <a href="#culture">Our Lens</a>
+      <a href="#features">Features</a>
+      <a href="#founders">Founders</a>
+      <a href="#waitlist">Waitlist</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="ft-copy">© 2026 Amara · Food inclusivity for every mother, in every kitchen, in every culture</div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>20));
+// Fade observer
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+// Waitlist
+function handleWL(e){e.preventDefault();e.target.style.display='none';document.querySelector('.wl-note').style.display='none';document.getElementById('wl-ok').style.display='block'}
+// Contact
+function handleCon(e){e.preventDefault();const b=e.target.querySelector('.f-sub');b.textContent='✓ Message sent — we will be in touch';b.style.background='var(--sage)';b.disabled=true}
+</script>
+</body>
+</html>
