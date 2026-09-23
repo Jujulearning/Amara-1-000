@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Prepare a photo for the Amara Health site.
 
-Applies the Amara campaign grade (restrained warmth, softly lifted shadows,
-gentle contrast) and writes four files into assets/img/:
-    NAME.jpg, NAME.avif         full size (long side capped at 1800px)
-    NAME-800.jpg, NAME-800.avif  800px long side, for phones
+Applies the Amara campaign grade (restrained warmth, gentle shadow lift) and
+writes three sizes into assets/img/, each as JPEG and AVIF:
+    NAME-800   800px wide, for phones
+    NAME-1400  1400px wide, for tablets and laptops
+    NAME       up to 2400px wide, for large and Retina screens
 
 Usage:
     python3 scripts/add_photo.py SOURCE NAME [--crop W:H] [--focus X]
@@ -20,7 +21,7 @@ Requires Pillow 11.2+ (for AVIF).
 import argparse
 from pathlib import Path
 
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 OUT = Path(__file__).resolve().parent.parent / "assets" / "img"
 
@@ -28,10 +29,9 @@ OUT = Path(__file__).resolve().parent.parent / "assets" / "img"
 def grade(im):
     """Amara campaign grade. Keep it restrained: skin tones and food must stay true."""
     im = im.convert("RGB")
-    im = ImageEnhance.Contrast(im).enhance(0.95)
-    im = ImageEnhance.Color(im).enhance(0.96)
+    im = ImageEnhance.Color(im).enhance(0.98)
     r, g, b = im.split()
-    lift = 9  # matte shadows
+    lift = 4  # a touch of shadow lift; keep blacks deep so images stay crisp
     r = r.point(lambda v: min(255, int(lift + v * (252 - lift) / 255 * 1.018)))
     g = g.point(lambda v: int(lift + v * (250 - lift) / 255))
     b = b.point(lambda v: int(lift - 2 + v * (240 - lift) / 255))
@@ -50,12 +50,19 @@ def crop(im, ratio, focus):
     return im.crop((0, top, w, top + ch))
 
 
-def export(im, name):
-    for long_side, suffix in ((1800, ""), (800, "-800")):
+def export(im, name, sharpen=True):
+    """One resize per output, then a single light sharpen tuned to that size."""
+    widths = [(800, "-800"), (1400, "-1400"), (2400, "")]
+    for w, suffix in widths:
+        if suffix and im.width <= w:
+            continue  # never upscale a smaller variant
         t = im.copy()
-        t.thumbnail((long_side, long_side), Image.LANCZOS)
-        t.save(OUT / f"{name}{suffix}.jpg", quality=82, optimize=True, progressive=True)
-        t.save(OUT / f"{name}{suffix}.avif", quality=58, speed=4)
+        if t.width > w:
+            t = t.resize((w, round(t.height * w / t.width)), Image.LANCZOS)
+        if sharpen:
+            t = t.filter(ImageFilter.UnsharpMask(radius=0.6 if w <= 800 else 0.9, percent=60, threshold=2))
+        t.save(OUT / f"{name}{suffix}.jpg", quality=90, optimize=True, progressive=True, subsampling=0)
+        t.save(OUT / f"{name}{suffix}.avif", quality=80, speed=4)
     print(f"{name}: {im.size[0]}x{im.size[1]}")
 
 
