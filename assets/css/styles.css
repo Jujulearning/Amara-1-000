@@ -985,7 +985,7 @@ picture { display: contents; }
 
 /* App concept screens */
 .approach-app { background: var(--cream); padding: clamp(16px, 2.5vw, 28px); }
-.approach-app img { aspect-ratio: 820 / 554; object-fit: contain; }
+.approach-app img { aspect-ratio: 3033 / 2000; object-fit: contain; }
 .approach-app figcaption { margin-top: 10px; text-align: center; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sage-text); font-weight: 600; }
 
 /* New photo crops */
@@ -1011,3 +1011,8 @@ picture { display: contents; }
 .outcomes-note { max-width: none; }
 .story-photo { width: 100%; max-width: 380px; margin-left: auto; }
 .essay-note { margin-top: 14px; }
+/* Partner paths: equal-height cards */
+.paths { align-items: stretch; }
+.path { display: flex; flex-direction: column; }
+.path-partners .path-toggle { align-self: flex-start; }
+.story-photo img { object-position: 50% 35%; }
