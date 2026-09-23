@@ -246,7 +246,7 @@ p + p { margin-top: 1.1em; }
 .hero-visual { position: relative; min-height: 520px; }
 .arch { border-radius: var(--arch); overflow: hidden; background: var(--sand); }
 .hero-photo { width: 78%; margin-left: auto; aspect-ratio: 4 / 5; }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 50%; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 .hero-dot {
   position: absolute; top: 4%; left: 6%; width: clamp(56px, 7vw, 96px); aspect-ratio: 1; border-radius: 50%;
   background: var(--gold);
@@ -301,25 +301,35 @@ p + p { margin-top: 1.1em; }
 .who-copy > p:not(.label) { color: var(--ink-soft); max-width: 34rem; }
 .who-copy .btn { margin-top: 36px; }
 .who-collage {
-  /* Frames are sized to the photos' native resolution (~275px wide) so they stay sharp. */
-  display: grid; grid-template-columns: repeat(2, minmax(0, 275px)); gap: 18px; justify-content: end; align-content: center;
+  display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(14, clamp(26px, 3vw, 40px));
+  position: relative;
 }
-.who-collage figure { overflow: hidden; border-radius: 14px; aspect-ratio: 16 / 10; background: var(--sand); }
-.who-collage figure:nth-child(even) { transform: translateY(44px); }
+.who-collage figure { overflow: hidden; border-radius: 14px; background: var(--sand); }
 .who-collage img { width: 100%; height: 100%; object-fit: cover; }
-.collage-c img { object-position: 60% 40%; }
+.collage-a { grid-column: 1 / 8; grid-row: 1 / 11; border-radius: var(--arch) !important; }
+.collage-b { grid-column: 8 / 13; grid-row: 2 / 6; margin-left: 16px; }
+.collage-c { grid-column: 8 / 13; grid-row: 7 / 12; margin-left: 16px; }
+.collage-d { grid-column: 3 / 9; grid-row: 10 / 15; border: 8px solid var(--cream); border-radius: 22px !important; z-index: 2; }
+.collage-a img { object-position: 38% 30%; }
+.collage-b img { object-position: 50% 62%; }
+.collage-c img { object-position: 58% 60%; }
+.collage-d img { object-position: 50% 28%; }
 
 .pantry {
   margin-top: clamp(80px, 10vw, 140px); padding-top: 40px; border-top: 2px solid var(--olive);
   display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px clamp(40px, 6vw, 96px);
 }
+.pantry-photo { margin-top: 32px; width: min(100%, 300px); aspect-ratio: 4 / 5; border-radius: var(--arch); overflow: hidden; background: var(--sand); }
+.pantry-photo img { width: 100%; height: 100%; object-fit: cover; }
 .pantry-intro { font-family: var(--serif); font-size: clamp(1.6rem, 2.6vw, 2.25rem); line-height: 1.2; color: var(--olive); }
 .pantry-intro em { color: var(--terracotta-text); }
-.pantry-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 32px; }
+.pantry-lead { grid-row: span 2; }
+.pantry-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 32px; align-content: start; }
 .pantry-list div { border-top: 1px solid var(--line); padding-top: 14px; }
 .pantry-list dt { font-family: var(--serif); font-size: 1.6rem; font-weight: 500; line-height: 1.15; color: var(--olive); }
 .pantry-list dd { margin: 6px 0 0; font-size: .875rem; color: var(--sage-text); letter-spacing: .01em; }
-.pantry .fine { grid-column: 2; }
+.pantry .fine { grid-column: 2; align-self: start; }
+.pantry { grid-template-rows: auto 1fr; align-items: start; }
 
 /* ---------- 1,000 days ---------- */
 .days-number {
@@ -347,8 +357,8 @@ p + p { margin-top: 1.1em; }
   .js .timeline.is-visible .tl-bar { transform: none; }
 }
 
-.days-photo { margin-top: clamp(64px, 8vw, 112px); border-radius: 16px; overflow: hidden; max-width: 900px; }
-.days-photo img { width: 100%; aspect-ratio: 900 / 299; object-fit: cover; }
+.days-photo { margin-top: clamp(64px, 8vw, 112px); border-radius: 16px; overflow: hidden; }
+.days-photo img { width: 100%; aspect-ratio: 21 / 8; object-fit: cover; object-position: 50% 42%; }
 
 .pillar-rows {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(40px, 6vw, 96px);
@@ -394,7 +404,7 @@ p + p { margin-top: 1.1em; }
   position: relative; font-family: var(--serif); font-style: italic; font-size: clamp(1.6rem, 2.4vw, 2.1rem);
   line-height: 1.32; color: var(--olive);
 }
-.story-photo { margin-top: 48px; width: 183px; aspect-ratio: 183 / 275; margin-left: auto; }
+.story-photo { margin-top: 48px; width: min(64%, 280px); aspect-ratio: 2 / 3; margin-left: auto; }
 .story-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 
 /* ---------- Experience ---------- */
@@ -710,9 +720,11 @@ p + p { margin-top: 1.1em; }
   .mission-grid, .who-grid, .story-grid, .feature, .partners-grid, .founders-head { grid-template-columns: 1fr; }
   .feature-flora .feature-visual { order: 2; }
   .feature-visual { margin-top: 8px; }
-  .who-collage { justify-content: start; padding-bottom: 44px; }
+  .who-collage { max-width: 560px; }
+  .pantry-photo { width: min(70%, 280px); }
   .pantry { grid-template-columns: 1fr; }
   .pantry .fine { grid-column: 1; }
+  .pantry-lead { grid-row: auto; }
   .pantry-list { grid-template-columns: repeat(2, 1fr); }
   .days-intro { justify-content: flex-start; }
   .pillar-rows, .days-foot { grid-template-columns: 1fr; }
@@ -755,3 +767,5 @@ p + p { margin-top: 1.1em; }
 .site-header.is-solid { background: rgba(250, 246, 239, .94); box-shadow: 0 1px 0 var(--line); }
 .header-back { margin-left: auto; }
 .footer-base-flush { margin-top: 0; }
+
+@media (max-width: 600px) { .collage-d { border-width: 5px; } }
