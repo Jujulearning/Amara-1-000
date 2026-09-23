@@ -14,6 +14,8 @@ Site photos (other than the founder portraits) come from Unsplash and are used u
 | `newborn-feet.jpg` | `photo-1510154221590-ff63e90a136f` |
 | `mother-lifting-child.jpg` | `photo-1528425646626-fcc5dd57daf5` |
 | `market-stall.jpg` | `photo-1668938616643-2b240e5a97da` |
+| `market-tomatoes.jpg` | `photo-1734255026082-82fdc81991f0` |
+| `everyday-produce.jpg` | `photo-1579113800032-c38bd7635818` |
 | `story-window.jpg` | `photo-1551457457-699ff7c5d5f5` |
 | `collard-greens.jpg` | `collard.avif` (uploaded with the Unsplash set; confirm source) |
 
