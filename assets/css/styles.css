@@ -317,28 +317,27 @@ p + p { margin-top: 1.1em; }
 
 .pantry {
   margin-top: clamp(80px, 10vw, 140px); padding-top: 40px; border-top: 2px solid var(--olive);
-  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); gap: 0 clamp(40px, 5vw, 80px); align-items: start;
+  display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px clamp(40px, 6vw, 96px); align-items: start;
 }
-.pantry-intro { font-family: var(--serif); font-size: clamp(1.9rem, 3.2vw, 2.9rem); line-height: 1.12; color: var(--olive); max-width: 14ch; }
+.pantry-intro { font-family: var(--serif); font-size: clamp(1.6rem, 2.6vw, 2.25rem); line-height: 1.2; color: var(--olive); }
 .pantry-intro em { color: var(--terracotta-text); }
-.pantry-lead { position: sticky; top: calc(var(--header-h) + 40px); padding-top: 8px; }
-/* Three staggered editorial panels */
-.pantry-panels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.8vw, 24px); padding-bottom: 56px; }
+.pantry-lead { grid-row: span 2; }
+.pantry-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-content: start; }
+.pantry-list div { border-top: 1px solid var(--line); padding-top: 14px; }
+.pantry-list dt { font-family: var(--serif); font-size: 1.6rem; font-weight: 500; line-height: 1.15; color: var(--olive); }
+.pantry-list dd { margin: 6px 0 0; font-size: .875rem; color: var(--sage-text); letter-spacing: .01em; }
+.pantry .fine { grid-column: 2; }
+/* Three photo panels in a single even row beneath the list */
+.pantry-panels { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.8vw, 24px); margin-top: clamp(32px, 4vw, 56px); }
 .pantry-panel { margin: 0; }
 .pantry-panel picture, .pantry-panel img { display: block; }
-.pantry-panel img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 14px; background: var(--sand); }
-.pantry-panel:nth-child(2) { transform: translateY(56px); }
-.pantry-panel:nth-child(1) img { border-radius: var(--arch); }
+.pantry-panel img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; background: var(--sand); }
+.pantry-panel:nth-child(2) img { object-position: 50% 70%; }
 .pantry-panel figcaption {
-  margin-top: 12px; font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--sage-text);
+  margin-top: 10px; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--sage-text);
   display: flex; align-items: center; gap: 10px;
 }
 .pantry-panel figcaption::before { content: ''; width: 18px; height: 1px; background: var(--gold); }
-.pantry-list { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 28px; margin-top: clamp(56px, 7vw, 96px); }
-.pantry-list div { border-top: 1px solid var(--line); padding-top: 14px; }
-.pantry-list dt { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; line-height: 1.15; color: var(--olive); }
-.pantry-list dd { margin: 6px 0 0; font-size: .875rem; color: var(--sage-text); letter-spacing: .01em; }
-.pantry .fine { grid-column: 1 / -1; margin-top: 20px; }
 
 /* ---------- 1,000 days ---------- */
 .days-number {
@@ -731,8 +730,8 @@ p + p { margin-top: 1.1em; }
   .feature-visual { margin-top: 8px; }
   .who-collage { max-width: 560px; }
   .pantry { grid-template-columns: 1fr; }
-  .pantry-lead { position: static; margin-bottom: 36px; }
-  .pantry-intro { max-width: 16ch; }
+  .pantry-lead { grid-row: auto; }
+  .pantry .fine { grid-column: 1; }
   .pantry-list { grid-template-columns: repeat(3, 1fr); }
   .days-intro { justify-content: flex-start; }
   .pillar-rows, .days-foot { grid-template-columns: 1fr; }
@@ -754,7 +753,7 @@ p + p { margin-top: 1.1em; }
   .pantry-list { grid-template-columns: 1fr 1fr; gap: 24px 20px; }
   .pantry-panel figcaption { font-size: .95rem; }
   .pantry-panel figcaption::before { display: none; }
-  .pantry-panel:nth-child(2) { transform: translateY(28px); }
+  .pantry-panel img { aspect-ratio: 4 / 5; }
   .pantry-list dt { font-size: 1.35rem; }
   .can-cannot { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
