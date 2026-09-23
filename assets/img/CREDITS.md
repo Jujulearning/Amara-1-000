@@ -6,7 +6,6 @@
 ## Illustrative images (`g-*.jpg` / `g-*.avif`)
 All other images were supplied by the Amara founders as AI-generated concept images (uploaded to the `photo-candidates` branch). They are **illustrative only** and do not depict Amara users, participants or patients; the site says so in the photo essay caption and the footer. `g-flora-screens` shows concept app screens (the first screen of the original was cropped out because of garbled generated text).
 
-Most images use the founders' full-resolution uploads (2000–4000 px), trimmed of stray strips and graded with `scripts/add_photo.py`. Five images had only small uploads (g-grandmother-teaching, g-family-meal, g-community-meal, g-greens-together, g-mother-daughter). They were enlarged 4× with the EDSR super-resolution model (OpenCV dnn_superres), then graded. Re-upload those five at full resolution to replace them.
 
 | File | Source upload |
 | --- | --- |
@@ -29,5 +28,5 @@ Most images use the founders' full-resolution uploads (2000–4000 px), trimmed 
 | g-meal-bowl | healthy-meal-bowl-concept.webp |
 | g-care-consultation | maternal-care-consultation-concept.webp |
 | g-mother-baby | mother-baby-affection-concept.webp |
-| g-mother-daughter | mother-daughter-cooking-concept.webp |
+| g-newborn | newborn-closeup-concept.webp |
 | g-pregnancy-journey | pregnancy-journey-concept.webp |

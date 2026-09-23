@@ -1034,3 +1034,4 @@ picture { display: contents; }
 .essay { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .essay-tile img, .essay-tile:nth-child(odd) img { aspect-ratio: 3 / 2; }
 @media (max-width: 600px) { .essay { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.collage-d img { object-position: 45% 45%; } .tl-y2 .tl-photo img { object-position: 40% 35%; }
