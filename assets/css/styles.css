@@ -966,3 +966,48 @@ picture { display: contents; }
 /* Contrast fixes: deeper clay for small accents on light backgrounds (≥5.8:1) */
 .badge-dark { color: #8E4424; }
 .flora-list span { color: #8E4424; }
+
+/* ---------- Full-width section headers (headline left, copy right) ---------- */
+.split-head { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 24px clamp(40px, 6vw, 96px); align-items: end; max-width: none !important; }
+.split-head .split-left .display { margin-bottom: 0; max-width: 16ch; }
+.split-head .split-right > *:first-child { margin-top: 0; }
+.split-head .split-right .lede { max-width: none; }
+.split-head .status-note, .split-head .outcomes-note { max-width: none; }
+
+/* ---------- "Every kitchen tells a story" photo essay ---------- */
+.essay { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 22px); margin-top: clamp(40px, 5vw, 64px); }
+.essay-tile { margin: 0; }
+.essay-tile img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; background: var(--sand); }
+.essay-tile:nth-child(odd) img { aspect-ratio: 4 / 3.4; }
+.essay-tile figcaption { margin-top: 10px; font-size: .8125rem; line-height: 1.45; color: var(--ink-soft); }
+.essay-tile figcaption strong { display: block; font-family: var(--sans); font-size: .6875rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--terracotta-text); margin-bottom: 2px; }
+.essay-note { margin-top: 18px; font-size: .75rem; color: var(--ink-soft); text-align: right; }
+
+/* App concept screens */
+.approach-app { background: var(--cream); padding: clamp(16px, 2.5vw, 28px); }
+.approach-app img { aspect-ratio: 820 / 554; object-fit: contain; }
+.approach-app figcaption { margin-top: 10px; text-align: center; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sage-text); font-weight: 600; }
+
+/* New photo crops */
+.collage-a img { object-position: 40% 30%; }
+.collage-d img { object-position: 50% 30%; }
+.hero-photo img { object-position: 55% 30%; }
+.tl-preg .tl-photo img { object-position: 35% 40%; }
+.tl-y2 .tl-photo img { object-position: 50% 25%; }
+.story-photo { aspect-ratio: 4 / 5; }
+.story-photo img { object-position: 50% 40%; }
+
+@media (max-width: 1080px) { .essay { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .split-head { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .essay { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .essay-note { text-align: left; }
+}
+/* Layout polish: fill the width, align headers and essay rows */
+.split-head { align-items: start; }
+.split-head .split-right { padding-top: clamp(0px, 3.2vw, 48px); }
+.essay-tile:nth-child(odd) img { aspect-ratio: 4 / 3; }
+.science .days-foot { max-width: none; }
+.outcomes-note { max-width: none; }
+.story-photo { width: 100%; max-width: 380px; margin-left: auto; }
+.essay-note { margin-top: 14px; }

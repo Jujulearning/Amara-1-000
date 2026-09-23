@@ -1,22 +1,35 @@
-# Photo credits
+# Image credits
 
-Site photos (other than the founder portraits) come from Unsplash and are used under the Unsplash License (free for commercial use; attribution not required). Source IDs are recorded so each image can be traced back to Unsplash.
+## Founder portraits
+`founder-juanita.jpg` and `founder-erica.jpg` are the founders' own photographs.
 
-| File | Unsplash source image |
+## Illustrative images (`g-*.jpg` / `g-*.avif`)
+All other images were supplied by the Amara founders as AI-generated concept images (uploaded to the `photo-candidates` branch). They are **illustrative only** and do not depict Amara users, participants or patients; the site says so in the photo essay caption and the footer. `g-flora-screens` shows concept app screens (the first screen of the original was cropped out because of garbled generated text).
+
+The source files were small (about 180–560 px wide). Each was cropped to remove stray image strips, enlarged 2× with Lanczos resampling and light sharpening, and given the Amara campaign grade with `scripts/add_photo.py`. **For the sharpest results, re-export the originals at full resolution (2000 px or wider)** and re-run the script with the same names.
+
+| File | Source upload |
 | --- | --- |
-| `hero-family-kitchen.jpg` | `photo-1761839258568-fd466a93f68b` |
-| `mother-baby-embrace.jpg` | `photo-1548783102-9eed000b70ef` |
-| `family-table.jpg` | `photo-1650678192497-28e426bb627c` |
-| `mother-newborn-rest.jpg` | Provided by the Amara team (confirm source) |
-| `first-foods.jpg` | `photo-1548289227-b7d966b70003` |
-| `pregnancy-field.jpg` | Provided by the Amara team (confirm source) |
-| `spices.jpg` | `photo-1716816211590-c15a328a5ff0` |
-| `newborn-feet.jpg` | `photo-1510154221590-ff63e90a136f` |
-| `mother-lifting-child.jpg` | `photo-1528425646626-fcc5dd57daf5` |
-| `market-stall.jpg` | `photo-1668938616643-2b240e5a97da` |
-| `market-tomatoes.jpg` | `photo-1734255026082-82fdc81991f0` |
-| `everyday-produce.jpg` | `photo-1579113800032-c38bd7635818` |
-| `story-window.jpg` | `photo-1551457457-699ff7c5d5f5` |
-| `collard-greens.jpg` | `collard.avif` (uploaded with the Unsplash set; confirm source) |
-
-All photos (except founder portraits) carry the Amara campaign grade from `scripts/add_photo.py`. Each photo has a full-size file and an `-800` version for smaller screens, in both AVIF (served to modern browsers, about half the size) and JPEG (fallback). The page picks between them with `<picture>` and `srcset`. Founder portraits are JPEG only.
+| g-pregnant-cooking | mother-cooking-concept.webp |
+| g-mother-child | mother-child-concept.webp |
+| g-grandmother-teaching | middle-eastern-intergenerational-cooking-concept.webp |
+| g-family-meal | family-meal-together-concept.webp |
+| g-greens-together | mother-child-preparing-greens-concept.webp |
+| g-andean-kitchen | andean-inspired-food-preparation-concept.webp |
+| g-caribbean-kitchen | caribbean-inspired-kitchen-prep-concept.webp |
+| g-east-asian-kitchen | east-asian-home-cooking-concept.webp |
+| g-noodles | east-asian-noodle-preparation-concept.webp |
+| g-west-african-stew | west-african-stew-cooking-concept.webp |
+| g-west-african-greens | west-african-greens-cooking-concept.webp |
+| g-tagine | north-african-tagine-preparation-concept.webp |
+| g-north-african-salad | north-african-salad-preparation-concept.webp |
+| g-tortillas | latin-american-tortilla-preparation-concept.webp |
+| g-ingredients | cultural-ingredients-concept.webp |
+| g-traditional-ingredients | traditional-ingredients-concept.webp |
+| g-community-meal | multicultural-community-meal-concept.webp |
+| g-flora-screens | flora-four-screens-concept.webp |
+| g-meal-bowl | healthy-meal-bowl-concept.webp |
+| g-care-consultation | maternal-care-consultation-concept.webp |
+| g-mother-baby | mother-smiling-baby-concept.webp |
+| g-mother-daughter | mother-daughter-cooking-concept.webp |
+| g-vegetable-prep | mother-daughter-vegetable-prep-concept.webp |

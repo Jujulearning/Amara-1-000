@@ -24,7 +24,8 @@ The website states only what could be confirmed from the repository, the Amara H
 - [ ] The Science section uses no numeric statistics. Each claim cites one of five verified sources (WHO 2016 antenatal care, Cusick & Georgieff 2016, Black et al. 2013 in The Lancet, Dietary Guidelines for Americans 2020–2025, and the WHO 2019 digital interventions guideline). Have a clinical or nutrition advisor review the wording before submission.
 
 ## Photography
-- [ ] New photos are coming from the founders; add them with `scripts/add_photo.py`.
+- [x] Founder-supplied concept images are now used site-wide (see `assets/img/CREDITS.md`), labelled as illustrative.
+- [ ] Re-export the concept images at full resolution. The uploads are 180–560 px wide, so they look soft on large and Retina screens.
 - [ ] Photos are licensed stock (see `assets/img/CREDITS.md`) and do not show Amara participants. Confirm the source of `collard-greens`, `mother-newborn-rest` and `pregnancy-field`. The shot list in `docs/photography-brief.md` describes the ideal hero image: a real kitchen, a mother cooking, cultural food.
 
 ## Forms
