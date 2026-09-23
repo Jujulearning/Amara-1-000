@@ -799,3 +799,11 @@ picture { display: contents; }
   .days-photo img { aspect-ratio: 3 / 2; }
   .mission-photo { width: 78%; }
 }
+
+/* Mission: spice photo balances the headline in the top-right */
+.mission-head { display: grid; grid-template-columns: minmax(0, 1fr) clamp(220px, 26vw, 340px); gap: clamp(32px, 5vw, 80px); align-items: end; }
+.mission-head .mission-photo { margin-top: 0; width: 100%; }
+@media (max-width: 900px) {
+  .mission-head { grid-template-columns: 1fr; align-items: start; }
+  .mission-head .mission-photo { width: min(62%, 280px); justify-self: end; margin-top: 8px; }
+}
