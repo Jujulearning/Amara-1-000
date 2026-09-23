@@ -312,7 +312,7 @@ p + p { margin-top: 1.1em; }
 .collage-d { grid-column: 3 / 9; grid-row: 10 / 15; border: 8px solid var(--cream); border-radius: 22px !important; z-index: 2; }
 .collage-a img { object-position: 38% 30%; }
 .collage-b img { object-position: 50% 62%; }
-.collage-c img { object-position: 58% 60%; }
+.collage-c img { object-position: 52% 45%; }
 .collage-d img { object-position: 50% 28%; }
 
 .pantry {
@@ -358,7 +358,7 @@ p + p { margin-top: 1.1em; }
 }
 
 .days-photo { margin-top: clamp(64px, 8vw, 112px); border-radius: 16px; overflow: hidden; }
-.days-photo img { width: 100%; aspect-ratio: 21 / 8; object-fit: cover; object-position: 50% 42%; }
+.days-photo img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; object-position: 50% 55%; }
 
 .pillar-rows {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(40px, 6vw, 96px);
