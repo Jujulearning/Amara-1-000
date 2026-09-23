@@ -803,3 +803,10 @@ picture { display: contents; }
 .mission-band img { width: 100%; aspect-ratio: 21 / 8; height: auto; object-fit: cover; object-position: 50% 45%; }
 .mission-band + .mission-grid { margin-top: clamp(48px, 6vw, 88px); }
 @media (max-width: 600px) { .mission-band img { aspect-ratio: 16 / 9; } }
+
+/* Review fixes: balanced headline wrapping */
+.exp-head { max-width: 64rem; }
+.exp-head .display { max-width: 24ch; }
+.feature-title, .display, .founder-name { text-wrap: balance; }
+.partners-copy .display { max-width: 18ch; }
+.exp-head .display em, .feature-title em { display: inline-block; text-wrap: balance; }
