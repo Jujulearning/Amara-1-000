@@ -18,11 +18,9 @@ Most images use the founders' full-resolution uploads (2000–4000 px), trimmed 
 | g-andean-kitchen | andean-inspired-food-preparation-concept.webp |
 | g-caribbean-kitchen | caribbean-inspired-kitchen-prep-concept.webp |
 | g-east-asian-kitchen | east-asian-home-cooking-concept.webp |
-| g-noodles | east-asian-noodle-preparation-concept.webp |
 | g-west-african-stew | west-african-stew-cooking-concept.webp |
 | g-west-african-greens | west-african-greens-cooking-concept.webp |
 | g-tagine | north-african-tagine-preparation-concept.webp |
-| g-north-african-salad | north-african-salad-preparation-concept.webp |
 | g-tortillas | latin-american-tortilla-preparation-concept.webp |
 | g-ingredients | cultural-ingredients-concept.webp |
 | g-traditional-ingredients | traditional-ingredients-concept.webp |
