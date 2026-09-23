@@ -43,7 +43,13 @@
   ]
 }
 </script>
-<script>document.documentElement.classList.add('js');</script>
+<script>
+document.documentElement.classList.add('js');
+/* Always open at the top: ignore remembered scroll position and any #section in the link. */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+window.scrollTo(0, 0);
+</script>
 </head>
 <body>
 

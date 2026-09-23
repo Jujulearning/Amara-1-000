@@ -74,13 +74,17 @@
     });
   }
 
-  /* ---------- Move focus to in-page targets (keyboard + screen reader users) ---------- */
+  /* ---------- In-page links: smooth scroll without adding #section to the URL ---------- */
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href^="#"]');
     if (!link) { return; }
     var id = link.getAttribute('href').slice(1);
     var target = id ? document.getElementById(id) : null;
     if (!target) { return; }
+    e.preventDefault();
+    var behavior = reduceMotion.matches ? 'auto' : 'smooth';
+    if (id === 'top') { window.scrollTo({ top: 0, behavior: behavior }); }
+    else { target.scrollIntoView({ behavior: behavior, block: 'start' }); }
     if (!target.hasAttribute('tabindex')) { target.setAttribute('tabindex', '-1'); }
     window.setTimeout(function () { target.focus({ preventScroll: true }); }, reduceMotion.matches ? 0 : 450);
   });
