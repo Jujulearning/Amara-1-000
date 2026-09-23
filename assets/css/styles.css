@@ -1030,3 +1030,7 @@ picture { display: contents; }
 .path-contact a { color: var(--gold); text-underline-offset: 3px; }
 .path-contact a:hover { color: var(--cream); }
 .milestone::before { width: 16px; height: 16px; top: -9px; }
+/* Photo essay: six kitchens, 3 x 2 */
+.essay { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.essay-tile img, .essay-tile:nth-child(odd) img { aspect-ratio: 3 / 2; }
+@media (max-width: 600px) { .essay { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
