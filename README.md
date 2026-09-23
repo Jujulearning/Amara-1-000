@@ -49,7 +49,7 @@ Spam protection is a hidden honeypot field. If spam becomes a problem, add rate 
 
 ## Before launch: content checklist
 
-- **Photography.** Most existing photos are small web thumbnails (about 300 px wide) of unknown licensing. Replace them with licensed, high-resolution images, keeping the same filenames in `assets/img/`. The hero photo should be at least 1200 px tall.
+- **Photography.** Photos are high-resolution Unsplash images (see `assets/img/CREDITS.md`). To swap one, export a full-size JPEG and an `-800` version with the same name, and update its `srcset` in `index.html`.
 - **Logo.** `assets/brand/amara-mark.svg` is drawn from the Cormorant Garamond "a" plus the gold dot. Replace it with the official brand-board file if it differs.
 - **Social image URL.** `og:image` is a relative path. Once the production domain is known, change it to an absolute URL (`https://yourdomain.com/assets/brand/og-image.jpg`) so every platform picks it up.
 - **Privacy notice.** Have `privacy.html` reviewed, and add a contact email.
