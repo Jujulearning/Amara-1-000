@@ -49,7 +49,7 @@ Spam protection is a hidden honeypot field. If spam becomes a problem, add rate 
 
 ## Before launch: content checklist
 
-- **Photography.** Photos are high-resolution Unsplash images (see `assets/img/CREDITS.md`). To swap one, export a full-size JPEG and an `-800` version with the same name, and update its `srcset` in `index.html`.
+- **Photography.** See `docs/photography-brief.md` for the creative direction, shot list and priorities. Add or replace a photo with `python3 scripts/add_photo.py SOURCE NAME` (applies the campaign grade and writes AVIF and JPEG in two sizes), then update its `srcset` in `index.html`. Sources are recorded in `assets/img/CREDITS.md`.
 - **Logo.** `assets/brand/amara-mark.svg` is drawn from the Cormorant Garamond "a" plus the gold dot. Replace it with the official brand-board file if it differs.
 - **Social image URL.** `og:image` is a relative path. Once the production domain is known, change it to an absolute URL (`https://yourdomain.com/assets/brand/og-image.jpg`) so every platform picks it up.
 - **Privacy notice.** Have `privacy.html` reviewed, and add a contact email.

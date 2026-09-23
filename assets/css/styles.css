@@ -358,7 +358,7 @@ p + p { margin-top: 1.1em; }
 }
 
 .days-photo { margin-top: clamp(64px, 8vw, 112px); border-radius: 16px; overflow: hidden; }
-.days-photo img { width: 100%; aspect-ratio: 5 / 2; object-fit: cover; object-position: 50% 55%; }
+.days-photo img { width: 100%; aspect-ratio: 5 / 2; object-fit: cover; object-position: 50% 64%; }
 
 .pillar-rows {
   display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(40px, 6vw, 96px);
