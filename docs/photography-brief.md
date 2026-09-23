@@ -42,7 +42,9 @@ Status: **Keep** = meets the direction · **Upgrade** = acceptable placeholder, 
 | `family-table` | small landscape | A family sharing food around a small kitchen table, mid-meal. | **Keep** (a festive table); a real family meal is the ideal. |
 | `mother-newborn-rest` | small landscape | Intimate early-days caregiving. | **Keep.** |
 | `first-foods` | inset landscape | A parent spoon-feeding a baby the family's own food. | **Keep.** |
-| `collard-greens` | 4:5 arch | Hands washing or stripping collard greens at a sink. | **Upgrade.** Currently a still life of leaves. |
+| `collard-greens` | 3:4 panel (arch) | Hands washing or stripping collard greens at a sink. | **Upgrade.** Currently a still life of leaves. |
+| `market-tomatoes` | 3:4 panel | Food shopping as part of daily life: a market, grocer or bodega. | **Keep.** |
+| `everyday-produce` | 3:4 panel | A family's everyday staples, as they are at home: a pantry shelf, a produce basket. | **Upgrade.** Close-up produce; a real home setting would be stronger. |
 | *new* | — | **A father preparing a meal for his family.** | **Missing. Top priority.** |
 | *new* | — | **A grandmother teaching her daughter a familiar dish.** | **Missing. Top priority.** |
 
