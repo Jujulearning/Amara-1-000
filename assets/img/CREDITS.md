@@ -6,11 +6,11 @@
 ## Illustrative images (`g-*.jpg` / `g-*.avif`)
 All other images were supplied by the Amara founders as AI-generated concept images (uploaded to the `photo-candidates` branch). They are **illustrative only** and do not depict Amara users, participants or patients; the site says so in the photo essay caption and the footer. `g-flora-screens` shows concept app screens (the first screen of the original was cropped out because of garbled generated text).
 
-The source files were small (about 180–560 px wide). Each was cropped to remove stray image strips, enlarged 2× with Lanczos resampling and light sharpening, and given the Amara campaign grade with `scripts/add_photo.py`. **For the sharpest results, re-export the originals at full resolution (2000 px or wider)** and re-run the script with the same names.
+Most images use the founders' full-resolution uploads (2000–4000 px), trimmed of stray strips and graded with `scripts/add_photo.py`. Five images had only small uploads (g-grandmother-teaching, g-family-meal, g-community-meal, g-greens-together, g-mother-daughter). They were enlarged 4× with the EDSR super-resolution model (OpenCV dnn_superres), then graded. Re-upload those five at full resolution to replace them.
 
 | File | Source upload |
 | --- | --- |
-| g-pregnant-cooking | mother-cooking-concept.webp |
+| g-pregnant-cooking | south-asian-pregnant-mother-cooking-concept.webp |
 | g-mother-child | mother-child-concept.webp |
 | g-grandmother-teaching | middle-eastern-intergenerational-cooking-concept.webp |
 | g-family-meal | family-meal-together-concept.webp |
@@ -30,6 +30,6 @@ The source files were small (about 180–560 px wide). Each was cropped to remov
 | g-flora-screens | flora-four-screens-concept.webp |
 | g-meal-bowl | healthy-meal-bowl-concept.webp |
 | g-care-consultation | maternal-care-consultation-concept.webp |
-| g-mother-baby | mother-smiling-baby-concept.webp |
+| g-mother-baby | mother-baby-affection-concept.webp |
 | g-mother-daughter | mother-daughter-cooking-concept.webp |
-| g-vegetable-prep | mother-daughter-vegetable-prep-concept.webp |
+| g-pregnancy-journey | pregnancy-journey-concept.webp |
