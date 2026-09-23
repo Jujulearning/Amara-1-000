@@ -1016,3 +1016,17 @@ picture { display: contents; }
 .path { display: flex; flex-direction: column; }
 .path-partners .path-toggle { align-self: flex-start; }
 .story-photo img { object-position: 50% 35%; }
+/* Founders: equal-height photos, short bios */
+.founder-two { margin-top: 0 !important; }
+.founder-photo { aspect-ratio: 4 / 5; }
+.founder-one .founder-photo, .founder-two .founder-photo { border-radius: 18px; }
+.founder-bio { margin-top: 18px !important; color: var(--ink-soft); }
+/* Milestones: dot on every item, short text */
+.milestone::before { z-index: 1; }
+.milestone.is-now::before, .milestone.is-next::before { background: var(--olive); }
+.milestone p:last-child { font-size: .9375rem; }
+/* Contact line in the partner card */
+.path-contact { margin: 0 0 20px !important; color: var(--on-olive-muted) !important; font-size: 1rem; }
+.path-contact a { color: var(--gold); text-underline-offset: 3px; }
+.path-contact a:hover { color: var(--cream); }
+.milestone::before { width: 16px; height: 16px; top: -9px; }
