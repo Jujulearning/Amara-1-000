@@ -13,4 +13,4 @@ Site photos (other than the founder portraits) come from Unsplash and are used u
 | `story-window.jpg` | `photo-1551457457-699ff7c5d5f5` |
 | `collard-greens.jpg` | `collard.avif` (uploaded with the Unsplash set; confirm source) |
 
-Each photo has a full-size file and an `-800` version for smaller screens; the page picks between them with `srcset`.
+Each photo has a full-size file and an `-800` version for smaller screens, in both AVIF (served to modern browsers, about half the size) and JPEG (fallback). The page picks between them with `<picture>` and `srcset`. Founder portraits are JPEG only.

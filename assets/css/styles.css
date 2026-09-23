@@ -769,3 +769,9 @@ p + p { margin-top: 1.1em; }
 .footer-base-flush { margin-top: 0; }
 
 @media (max-width: 600px) { .collage-d { border-width: 5px; } }
+picture { display: contents; }
+.brand-sub {
+  font-family: var(--sans); font-size: .7rem; font-weight: 600; letter-spacing: .26em; text-transform: uppercase;
+  color: var(--sage-text); margin-left: -2px; padding-top: 5px;
+}
+.brand-light .brand-sub { color: var(--gold); }
