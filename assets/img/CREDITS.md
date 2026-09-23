@@ -10,6 +10,10 @@ Site photos (other than the founder portraits) come from Unsplash and are used u
 | `mother-newborn-rest.jpg` | Provided by the Amara team (confirm source) |
 | `first-foods.jpg` | `photo-1548289227-b7d966b70003` |
 | `pregnancy-field.jpg` | Provided by the Amara team (confirm source) |
+| `spices.jpg` | `photo-1716816211590-c15a328a5ff0` |
+| `newborn-feet.jpg` | `photo-1510154221590-ff63e90a136f` |
+| `mother-lifting-child.jpg` | `photo-1528425646626-fcc5dd57daf5` |
+| `jollof-table.jpg` | `photo-1665332195309-9d75071138f0` |
 | `story-window.jpg` | `photo-1551457457-699ff7c5d5f5` |
 | `collard-greens.jpg` | `collard.avif` (uploaded with the Unsplash set; confirm source) |
 
