@@ -89,6 +89,21 @@
     window.setTimeout(function () { target.focus({ preventScroll: true }); }, reduceMotion.matches ? 0 : 450);
   });
 
+  /* ---------- Partnership form disclosure ---------- */
+  document.querySelectorAll('.path-toggle').forEach(function (btn) {
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!panel) { return; }
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+      if (!open) {
+        var first = panel.querySelector('input:not([type="hidden"]), select, textarea');
+        if (first) { first.focus(); }
+      }
+    });
+  });
+
   /* ---------- Scroll-spy for primary nav ---------- */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('.primary-nav a[href^="#"]'));
   if ('IntersectionObserver' in window && navLinks.length) {
@@ -262,14 +277,34 @@
       var timer = controller ? window.setTimeout(function () { controller.abort(); }, 15000) : null;
       var httpStatus = 0;
 
+      var signal = controller ? controller.signal : undefined;
+
+      /* Netlify Forms fallback: used when the site is served without the /api functions
+         (e.g. on Netlify). Only reports success if Netlify accepted the submission. */
+      var submitToNetlify = function () {
+        return fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form)).toString(),
+          signal: signal
+        }).then(function (res) {
+          httpStatus = res.status;
+          if (res.ok) { return { ok: true }; }
+          var err = new Error('Request failed');
+          err.payload = {};
+          throw err;
+        });
+      };
+
       fetch(form.getAttribute('data-endpoint'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(serialize(form)),
-        signal: controller ? controller.signal : undefined
+        signal: signal
       })
         .then(function (res) {
           httpStatus = res.status;
+          if (res.status === 404 || res.status === 405) { return submitToNetlify(); }
           return res.json().catch(function () { return {}; }).then(function (payload) {
             if (res.ok && payload && payload.ok) { return payload; }
             var err = new Error('Request failed');

@@ -1,6 +1,6 @@
 # Amara Health — website
 
-Static marketing site for Amara Health, deployed on Vercel. No build step and no npm dependencies.
+Static website for Amara Health. No build step and no npm dependencies. The live site is served from Netlify (amara1000.netlify.app); `vercel.json` and `api/` also support a Vercel deployment.
 
 ```
 index.html              Home page (single scrolling page with section anchors)
@@ -20,6 +20,15 @@ vercel.json             Static output + security/caching headers
 Push to GitHub as before; Vercel serves the repository root and automatically deploys the `api/` functions (Node.js runtime, Node 18+).
 
 ## Connecting the forms (required before launch)
+
+### On Netlify (current live site)
+
+Both forms carry `data-netlify="true"`, so Netlify Forms detects them at deploy time. When `/api` is not available (as on Netlify), the site submits to Netlify Forms instead and shows success only if Netlify accepts the submission.
+
+1. In Netlify, open the site → **Forms** and make sure **form detection** is enabled, then redeploy.
+2. Submissions appear under **Forms → waitlist** and **Forms → partner**. Add email notifications under **Forms → Form notifications**.
+
+### On Vercel
 
 The waitlist and partnership forms submit to the functions above. **Until at least one delivery integration is configured, both endpoints return `503 not_configured` and the site shows a "not accepting sign-ups yet" message. It never fakes a successful sign-up.**
 
