@@ -1225,3 +1225,13 @@ h2 em { font-style: italic; font-weight: 400; }
   .progress .milestone::before { left: 50%; transform: translateX(-50%); top: calc(var(--dot) / -2); width: var(--dot); height: var(--dot); z-index: 1; }
 }
 @media (max-width: 900px) { .progress .milestone.is-done { border-left-color: var(--gold); } }
+.collage-d img { object-position: 62% 50%; }
+/* New Flora screens image carries its own green backdrop: show it edge to edge */
+.approach-app { padding: 0; background: none; overflow: hidden; }
+.approach-app img { aspect-ratio: 3 / 2; object-fit: cover; }
+/* Story: the "conflicting advice" scene is wide, so frame it landscape */
+.story-photo.arch { width: 100%; max-width: none; aspect-ratio: 4 / 3; border-radius: 18px; }
+.story-photo img { object-position: 45% 50%; }
+.tl-preg .tl-photo img { object-position: 30% 40%; }
+.path-contact .is-soon { display: inline-flex; align-items: center; gap: 6px; font-style: italic; }
+.path-contact .is-soon svg { color: var(--gold); }

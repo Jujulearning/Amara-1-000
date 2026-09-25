@@ -9,23 +9,25 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 
 | File | Source upload |
 | --- | --- |
-| g-pregnant-cooking | sharper version supplied by the founders (Sept 2026) |
+| g-pregnant-cooking | new version supplied by the founders (Sept 2026) |
 | g-mother-child | new version supplied by the founders (Sept 2026) |
-| g-grandmother-teaching | middle-eastern-intergenerational-cooking-concept.webp |
-| g-family-meal | family-meal-together-concept.webp |
-| g-greens-together | mother-child-preparing-greens-concept.webp |
-| g-caribbean-kitchen | caribbean-inspired-kitchen-prep-concept.webp |
-| g-east-asian-kitchen | east-asian-home-cooking-concept.webp |
-| g-west-african-stew | west-african-stew-cooking-concept.webp |
-| g-west-african-greens | west-african-greens-cooking-concept.webp |
-| g-tortillas | latin-american-tortilla-preparation-concept.webp |
+| g-grandmother-teaching | sharper version supplied by the founders (Sept 2026) |
+| g-family-meal | new version supplied by the founders (Sept 2026) |
+| g-greens-together | new version supplied by the founders (Sept 2026) |
+| g-caribbean-kitchen | new version supplied by the founders (Sept 2026) |
+| g-east-asian-kitchen | new version supplied by the founders (Sept 2026) |
+| g-west-african-stew | new version supplied by the founders (Sept 2026) |
+| g-tortillas | new version supplied by the founders (Sept 2026) |
 | g-ingredients | cultural-ingredients-concept.webp (sharper version supplied by the founders, Sept 2026) |
-| g-traditional-ingredients | traditional-ingredients-concept.webp |
-| g-community-meal | multicultural-community-meal-concept.webp |
-| g-flora-screens | flora-four-screens-concept.webp |
-| g-meal-bowl | healthy-meal-bowl-concept.webp |
-| g-mother-baby | mother-baby-affection-concept.webp |
-| g-newborn | newborn-closeup-concept.webp |
-| g-pregnancy-journey | pregnancy-journey-concept.webp |
+| g-traditional-ingredients | pantry staples table supplied by the founders (Sept 2026) |
+| g-community-meal | new version supplied by the founders (Sept 2026) |
+| g-flora-screens | new Flora concept screens supplied by the founders (Sept 2026) |
+| g-meal-bowl | new version supplied by the founders (Sept 2026) |
+| g-mother-baby | mother feeding her baby, supplied by the founders (Sept 2026) |
+| g-newborn | new version supplied by the founders (Sept 2026) |
 | g-east-african-kitchen | East African kitchen image supplied by the founders (Sept 2026) |
-| g-pregnancy-kitchen | pregnant mother cooking in a sari, supplied by the founders (Sept 2026) |
+| g-pregnancy-kitchen | pregnant woman in a headwrap, supplied by the founders (Sept 2026) |
+| g-leafy-greens | leafy greens flat lay supplied by the founders (Sept 2026) |
+| g-conflicting-advice | pregnant woman receiving conflicting advice, supplied by the founders (Sept 2026) |
+| g-year-two | toddler eating family foods, supplied by the founders (Sept 2026) |
+| g-middle-eastern-kitchen | woman preparing tabbouleh, supplied by the founders (Sept 2026) |
