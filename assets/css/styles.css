@@ -1209,3 +1209,19 @@ h2 em { font-style: italic; font-weight: 400; }
 .progress .milestone.is-now::before { background: var(--sage); border-color: var(--sage); box-shadow: 0 0 0 6px rgba(122, 138, 90, .25); }
 .progress .milestone.is-now .ms-status { color: var(--sage-text) !important; }
 @media (max-width: 900px) { .progress .milestone, .progress .milestone.is-done { border-left-color: rgba(62, 74, 46, .28); } }
+/* New photos: keep faces in frame */
+.collage-a img { object-position: 46% 40%; }
+.tl-preg .tl-photo img { object-position: 12% 40%; }
+
+/* Progress timeline (desktop): dots centred over each stage; gold line runs from the
+   first stage to the middle (current) stage, grey line continues to the last */
+@media (min-width: 901px) {
+  .progress .milestones { --dot: 16px; }
+  .progress .milestones::before,
+  .progress .milestones::after { content: ''; position: absolute; top: -1px; height: 2px; left: 10%; }
+  .progress .milestones::before { right: 10%; background: rgba(62, 74, 46, .22); }
+  .progress .milestones::after { width: 40%; background: var(--gold); }
+  .progress .milestone, .progress .milestone.is-done { border-top: 0; padding: 36px 14px 0; text-align: center; }
+  .progress .milestone::before { left: 50%; transform: translateX(-50%); top: calc(var(--dot) / -2); width: var(--dot); height: var(--dot); z-index: 1; }
+}
+@media (max-width: 900px) { .progress .milestone.is-done { border-left-color: var(--gold); } }
