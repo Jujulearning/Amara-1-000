@@ -66,6 +66,6 @@ Spam protection is a hidden honeypot field. If spam becomes a problem, add rate 
 ## Before launch: content checklist
 
 - **Photography.** See `docs/photography-brief.md` for the creative direction, shot list and priorities. Add or replace a photo with `python3 scripts/add_photo.py SOURCE NAME` (applies the campaign grade and writes AVIF and JPEG in two sizes), then update its `srcset` in the page that uses it. Sources are recorded in `assets/img/CREDITS.md`.
-- **Logo.** `assets/brand/amara-tree.png` (full) and `amara-tree-sm.png` (header/badges) are the tree emblem from the brand board. The olive trunk needs a cream background behind it. `favicon.png` and `apple-touch-icon.png` are made from it.
+- **Logo.** `assets/brand/amara-tree.png` (full) and `amara-tree-sm.png` (header/badges) are the tree emblem from the brand board. The olive trunk needs a cream background behind it. `/favicon.ico`, `favicon-32.png`, `icon-192.png` and `apple-touch-icon.png` are made from it (the `?v=2` on their links forces browsers to refresh cached icons; bump it when the icon changes).
 - **Social image URL.** `og:image` is a relative path. Once the production domain is known, change it to an absolute URL (`https://yourdomain.com/assets/brand/og-image.jpg`) so every platform picks it up.
 - **Privacy notice.** Have `privacy.html` reviewed, and add a contact email.
