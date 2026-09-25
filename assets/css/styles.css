@@ -1225,3 +1225,4 @@ h2 em { font-style: italic; font-weight: 400; }
   .progress .milestone::before { left: 50%; transform: translateX(-50%); top: calc(var(--dot) / -2); width: var(--dot); height: var(--dot); z-index: 1; }
 }
 @media (max-width: 900px) { .progress .milestone.is-done { border-left-color: var(--gold); } }
+.collage-d img { object-position: 62% 50%; }
