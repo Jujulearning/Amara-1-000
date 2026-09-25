@@ -1197,3 +1197,7 @@ h2 em { font-style: italic; font-weight: 400; }
   .closing-orb::after { width: 42px; height: 42px; margin: -21px 0 0 -21px; }
 }
 .closing-title { max-width: 13ch; }
+/* Challenge page: tighten the space above "Every kitchen tells a story." */
+.problem:has(+ .kitchens) { padding-bottom: clamp(40px, 5vw, 64px); }
+.problem + .kitchens { padding-top: clamp(40px, 5vw, 64px); }
+.kitchens .transition-line { margin-top: 0; padding-top: 40px; }
