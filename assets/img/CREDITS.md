@@ -19,13 +19,15 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 | g-west-african-stew | west-african-stew-cooking-concept.webp |
 | g-tortillas | latin-american-tortilla-preparation-concept.webp |
 | g-ingredients | cultural-ingredients-concept.webp (sharper version supplied by the founders, Sept 2026) |
-| g-traditional-ingredients | new version supplied by the founders (Sept 2026) |
+| g-traditional-ingredients | pantry staples table supplied by the founders (Sept 2026) |
 | g-community-meal | new version supplied by the founders (Sept 2026) |
 | g-flora-screens | new Flora concept screens supplied by the founders (Sept 2026) |
 | g-meal-bowl | new version supplied by the founders (Sept 2026) |
-| g-mother-baby | mother-baby-affection-concept.webp |
+| g-mother-baby | mother feeding her baby, supplied by the founders (Sept 2026) |
 | g-newborn | new version supplied by the founders (Sept 2026) |
 | g-east-african-kitchen | East African kitchen image supplied by the founders (Sept 2026) |
-| g-pregnancy-kitchen | pregnant mother cooking in a sari, supplied by the founders (Sept 2026) |
+| g-pregnancy-kitchen | pregnant woman in a headwrap, supplied by the founders (Sept 2026) |
 | g-leafy-greens | leafy greens flat lay supplied by the founders (Sept 2026) |
 | g-conflicting-advice | pregnant woman receiving conflicting advice, supplied by the founders (Sept 2026) |
+| g-year-two | toddler eating family foods, supplied by the founders (Sept 2026) |
+| g-middle-eastern-kitchen | woman preparing tabbouleh, supplied by the founders (Sept 2026) |
