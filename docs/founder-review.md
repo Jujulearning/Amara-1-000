@@ -16,7 +16,7 @@ The website states only what could be confirmed from the repository, the Amara H
 - [x] **Tagline.** Confirmed by founders: "Every table. Every kitchen. Every culture." Used in the hero, mobile menu, footer and page title.
 
 ## Founders
-- [x] **Juanita: MSPH, Johns Hopkins University (confirmed).** **Juanita's name.** Confirmed: "Juanita Julius Ndyamukama".
+- [x] **Juanita: MSPH, Johns Hopkins University (confirmed).** **Juanita's name.** Confirmed: "Juanita Ndyamukama".
 - [ ] **Juanita's experience.** Shown as "Graduate training in health policy at Johns Hopkins University" and "Brings the policy lens and the cultural food knowledge behind Amara's nutrition content." Add any documented roles or experience you want included.
 - [x] **Erica's experience.** Confirmed: maternal health fellow in Ghana, plus public health, health policy, health systems, data analytics and digital health.
 
