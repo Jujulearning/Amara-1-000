@@ -1202,3 +1202,10 @@ h2 em { font-style: italic; font-weight: 400; }
 .problem + .kitchens { padding-top: clamp(40px, 5vw, 64px); }
 .kitchens .transition-line { margin-top: 0; padding-top: 40px; }
 .founder-bio p { color: var(--ink-soft); } .founder-bio p + p { margin-top: 14px; }
+/* Progress timeline: one continuous line; gold for completed steps, green only for where we are now */
+.progress .milestone, .progress .milestone.is-done { border-top-color: rgba(62, 74, 46, .28); }
+.progress .milestone::before { background: var(--cream); border: 2px solid rgba(62, 74, 46, .4); box-shadow: none; }
+.progress .milestone.is-done::before { background: var(--gold); border-color: var(--gold); }
+.progress .milestone.is-now::before { background: var(--sage); border-color: var(--sage); box-shadow: 0 0 0 6px rgba(122, 138, 90, .25); }
+.progress .milestone.is-now .ms-status { color: var(--sage-text) !important; }
+@media (max-width: 900px) { .progress .milestone, .progress .milestone.is-done { border-left-color: rgba(62, 74, 46, .28); } }
