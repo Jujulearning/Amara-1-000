@@ -9,8 +9,8 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 
 | File | Source upload |
 | --- | --- |
-| g-pregnant-cooking | south-asian-pregnant-mother-cooking-concept.webp |
-| g-mother-child | mother-child-concept.webp |
+| g-pregnant-cooking | sharper version supplied by the founders (Sept 2026) |
+| g-mother-child | new version supplied by the founders (Sept 2026) |
 | g-grandmother-teaching | middle-eastern-intergenerational-cooking-concept.webp |
 | g-family-meal | family-meal-together-concept.webp |
 | g-greens-together | mother-child-preparing-greens-concept.webp |
@@ -19,13 +19,13 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 | g-west-african-stew | west-african-stew-cooking-concept.webp |
 | g-west-african-greens | west-african-greens-cooking-concept.webp |
 | g-tortillas | latin-american-tortilla-preparation-concept.webp |
-| g-ingredients | cultural-ingredients-concept.webp |
+| g-ingredients | cultural-ingredients-concept.webp (sharper version supplied by the founders, Sept 2026) |
 | g-traditional-ingredients | traditional-ingredients-concept.webp |
 | g-community-meal | multicultural-community-meal-concept.webp |
 | g-flora-screens | flora-four-screens-concept.webp |
 | g-meal-bowl | healthy-meal-bowl-concept.webp |
-| g-care-consultation | maternal-care-consultation-concept.webp |
 | g-mother-baby | mother-baby-affection-concept.webp |
 | g-newborn | newborn-closeup-concept.webp |
 | g-pregnancy-journey | pregnancy-journey-concept.webp |
 | g-east-african-kitchen | East African kitchen image supplied by the founders (Sept 2026) |
+| g-pregnancy-kitchen | pregnant mother cooking in a sari, supplied by the founders (Sept 2026) |
