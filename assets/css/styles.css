@@ -1152,3 +1152,48 @@ h2 em { font-style: italic; font-weight: 400; }
 .footer-nav ul { grid-template-columns: repeat(2, max-content); grid-template-rows: repeat(5, auto); grid-auto-flow: column; column-gap: clamp(28px, 4vw, 56px); }
 /* Drop cap: sit the letter between the first line's cap height and the second line's baseline, snug to the text */
 .dropcap::first-letter { font-size: 3.45em; line-height: .74; padding: .1em .03em 0 0; }
+
+/* ==========================================================================
+   Closing footer (replaces the green banner + old footer on every page)
+   ========================================================================== */
+.closing { position: relative; overflow: hidden; background: var(--olive-deep); color: var(--on-olive); padding: clamp(64px, 8vw, 104px) 0 32px; --focus: var(--gold); }
+.closing-orb { position: absolute; top: 26px; right: -2px; width: 144px; height: 144px; border-radius: 50%; border: 1px solid rgba(224, 177, 76, .28); pointer-events: none; }
+.closing-orb::after { content: ''; position: absolute; top: 50%; left: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%; background: #A89040; }
+.closing-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(48px, 8vw, 120px); align-items: start; }
+.closing-brand .brand-word { font-size: 2.6rem; }
+.closing-brand .brand-sub { font-size: .8125rem; letter-spacing: .32em; margin-left: 10px; }
+.closing-title { margin-top: clamp(40px, 5vw, 64px); font-size: clamp(2.6rem, 5.4vw, 4.6rem); line-height: 1.12; color: var(--cream); font-weight: 400; max-width: 12ch; }
+.closing-title em { color: var(--gold); font-style: italic; }
+.closing-lede { margin-top: 28px; max-width: 38rem; font-size: 1.1875rem; line-height: 1.85; color: var(--on-olive-muted); }
+.closing-tagline { margin-top: 32px; font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.3vw, 2.1rem); line-height: 1.3; color: var(--cream); max-width: 22ch; }
+.closing-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+.closing-actions .btn { padding-inline: 40px; }
+.closing-side { padding-top: clamp(64px, 7vw, 92px); }
+.closing-label { font-size: .8125rem; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); margin-bottom: 26px; }
+.stay-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-light); }
+.stay-list li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line-light); }
+.stay-name { font-size: 1.125rem; color: var(--cream); }
+.stay-list a { color: var(--on-olive-muted); text-decoration: none; font-size: 1.0625rem; overflow-wrap: anywhere; text-align: right; }
+.stay-list a:hover { color: var(--gold); }
+.stay-soon { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; font-style: italic; color: var(--on-olive-muted); }
+.stay-soon svg { color: var(--gold); flex: none; }
+.closing-nav ul { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.closing-nav a { color: var(--on-olive-muted); text-decoration: none; font-size: 1.0625rem; }
+.closing-nav a:hover { color: var(--gold); }
+.closing-disclaimer { margin-top: clamp(56px, 7vw, 88px); border-top: 1px solid var(--line-light); border-bottom: 1px solid var(--line-light); }
+.closing-disclaimer summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 28px 0; font-size: 1.0625rem; font-weight: 500; letter-spacing: .03em; color: var(--cream); }
+.closing-disclaimer summary::-webkit-details-marker { display: none; }
+.closing-disclaimer summary::after { content: '+'; font-size: 1.9rem; font-weight: 300; line-height: 1; color: var(--gold); transition: transform .3s var(--ease); }
+.closing-disclaimer[open] summary::after { transform: rotate(45deg); }
+.closing-disclaimer p { max-width: 60rem; padding-bottom: 20px; font-size: .9375rem; line-height: 1.7; color: var(--on-olive-muted); }
+.closing-base { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding-top: 28px; font-size: .9375rem; color: var(--on-olive-muted); }
+.closing-base ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 36px; }
+.closing-base a { color: var(--on-olive-muted); text-decoration: none; }
+.closing-base a:hover { color: var(--gold); }
+@media (max-width: 900px) {
+  .closing-grid { grid-template-columns: 1fr; gap: 0; }
+  .closing-side { padding-top: 56px; }
+  .closing-orb { width: 104px; height: 104px; top: 16px; right: -24px; }
+  .closing-orb::after { width: 42px; height: 42px; margin: -21px 0 0 -21px; }
+}
+.closing-title { max-width: 13ch; }
