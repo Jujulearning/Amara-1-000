@@ -19,7 +19,7 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 | g-west-african-stew | west-african-stew-cooking-concept.webp |
 | g-west-african-greens | west-african-greens-cooking-concept.webp |
 | g-tortillas | latin-american-tortilla-preparation-concept.webp |
-| g-ingredients | cultural-ingredients-concept.webp |
+| g-ingredients | cultural-ingredients-concept.webp (sharper version supplied by the founders, Sept 2026) |
 | g-traditional-ingredients | traditional-ingredients-concept.webp |
 | g-community-meal | multicultural-community-meal-concept.webp |
 | g-flora-screens | flora-four-screens-concept.webp |
