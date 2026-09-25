@@ -13,11 +13,11 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 | g-mother-child | new version supplied by the founders (Sept 2026) |
 | g-grandmother-teaching | sharper version supplied by the founders (Sept 2026) |
 | g-family-meal | new version supplied by the founders (Sept 2026) |
-| g-greens-together | mother-child-preparing-greens-concept.webp |
-| g-caribbean-kitchen | caribbean-inspired-kitchen-prep-concept.webp |
-| g-east-asian-kitchen | east-asian-home-cooking-concept.webp |
-| g-west-african-stew | west-african-stew-cooking-concept.webp |
-| g-tortillas | latin-american-tortilla-preparation-concept.webp |
+| g-greens-together | new version supplied by the founders (Sept 2026) |
+| g-caribbean-kitchen | new version supplied by the founders (Sept 2026) |
+| g-east-asian-kitchen | new version supplied by the founders (Sept 2026) |
+| g-west-african-stew | new version supplied by the founders (Sept 2026) |
+| g-tortillas | new version supplied by the founders (Sept 2026) |
 | g-ingredients | cultural-ingredients-concept.webp (sharper version supplied by the founders, Sept 2026) |
 | g-traditional-ingredients | pantry staples table supplied by the founders (Sept 2026) |
 | g-community-meal | new version supplied by the founders (Sept 2026) |

@@ -1233,3 +1233,5 @@ h2 em { font-style: italic; font-weight: 400; }
 .story-photo.arch { width: 100%; max-width: none; aspect-ratio: 4 / 3; border-radius: 18px; }
 .story-photo img { object-position: 45% 50%; }
 .tl-preg .tl-photo img { object-position: 30% 40%; }
+.path-contact .is-soon { display: inline-flex; align-items: center; gap: 6px; font-style: italic; }
+.path-contact .is-soon svg { color: var(--gold); }
