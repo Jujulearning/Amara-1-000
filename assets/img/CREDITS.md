@@ -28,3 +28,4 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 | g-mother-baby | mother-baby-affection-concept.webp |
 | g-newborn | newborn-closeup-concept.webp |
 | g-pregnancy-journey | pregnancy-journey-concept.webp |
+| g-east-african-kitchen | East African kitchen image supplied by the founders (Sept 2026) |
