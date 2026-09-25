@@ -1242,3 +1242,6 @@ h2 em { font-style: italic; font-weight: 400; }
 @media (max-width: 900px) { .story-photo.arch { margin-top: 0; } .story .story-grid { gap: 28px; } }
 .bio-soon { font-style: italic; color: var(--sage-text) !important; }
 .bio-soon { display: inline-flex; align-items: center; gap: 6px; } .bio-soon svg { color: var(--gold); }
+/* Hero badge: the Amara tree inside the circle */
+.hero-dot { display: grid; place-items: center; width: clamp(64px, 7vw, 100px); background: var(--cream); box-shadow: 0 0 0 4px var(--gold), 0 10px 24px rgba(38, 44, 28, .18); z-index: 1; }
+.hero-dot img { width: 74%; height: auto; margin-top: 4%; }
