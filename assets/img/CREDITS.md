@@ -14,12 +14,10 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 | g-grandmother-teaching | middle-eastern-intergenerational-cooking-concept.webp |
 | g-family-meal | family-meal-together-concept.webp |
 | g-greens-together | mother-child-preparing-greens-concept.webp |
-| g-andean-kitchen | andean-inspired-food-preparation-concept.webp |
 | g-caribbean-kitchen | caribbean-inspired-kitchen-prep-concept.webp |
 | g-east-asian-kitchen | east-asian-home-cooking-concept.webp |
 | g-west-african-stew | west-african-stew-cooking-concept.webp |
 | g-west-african-greens | west-african-greens-cooking-concept.webp |
-| g-tagine | north-african-tagine-preparation-concept.webp |
 | g-tortillas | latin-american-tortilla-preparation-concept.webp |
 | g-ingredients | cultural-ingredients-concept.webp |
 | g-traditional-ingredients | traditional-ingredients-concept.webp |

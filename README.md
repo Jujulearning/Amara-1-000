@@ -3,10 +3,17 @@
 Static website for Amara Health. No build step and no npm dependencies. The live site is served from Netlify (amara1000.netlify.app); `vercel.json` and `api/` also support a Vercel deployment.
 
 ```
-index.html              Home page (single scrolling page with section anchors)
+index.html              Home (hero, then the closing banner)
+challenge.html          The Challenge + the science of the first 1,000 days  (/challenge)
+approach.html           Our Approach  (/approach)
+flora.html              Meet Flora  (/flora)
+story.html              Our Story  (/story)
+founders.html           The Founders  (/founders)
+progress.html           Progress  (/progress)
+partner.html            Partner With Us, with the waitlist and partner forms  (/partner)
 privacy.html            Privacy notice (served at /privacy via cleanUrls)
 assets/css/styles.css   All styles (brand tokens at the top)
-assets/js/main.js       Menu, scroll reveals, scroll-spy, form handling
+assets/js/main.js       Menu, scroll reveals, form handling
 assets/img/             Photography
 assets/brand/           Logo mark, favicon, social share image
 api/waitlist.js         POST /api/waitlist  (Vercel serverless function)
@@ -58,7 +65,7 @@ Spam protection is a hidden honeypot field. If spam becomes a problem, add rate 
 
 ## Before launch: content checklist
 
-- **Photography.** See `docs/photography-brief.md` for the creative direction, shot list and priorities. Add or replace a photo with `python3 scripts/add_photo.py SOURCE NAME` (applies the campaign grade and writes AVIF and JPEG in two sizes), then update its `srcset` in `index.html`. Sources are recorded in `assets/img/CREDITS.md`.
-- **Logo.** `assets/brand/amara-mark.svg` is drawn from the Cormorant Garamond "a" plus the gold dot. Replace it with the official brand-board file if it differs.
+- **Photography.** See `docs/photography-brief.md` for the creative direction, shot list and priorities. Add or replace a photo with `python3 scripts/add_photo.py SOURCE NAME` (applies the campaign grade and writes AVIF and JPEG in two sizes), then update its `srcset` in the page that uses it. Sources are recorded in `assets/img/CREDITS.md`.
+- **Logo.** `assets/brand/amara-tree.png` (full) and `amara-tree-sm.png` (header/badges) are the tree emblem from the brand board. The olive trunk needs a cream background behind it. `favicon.png` and `apple-touch-icon.png` are made from it.
 - **Social image URL.** `og:image` is a relative path. Once the production domain is known, change it to an absolute URL (`https://yourdomain.com/assets/brand/og-image.jpg`) so every platform picks it up.
 - **Privacy notice.** Have `privacy.html` reviewed, and add a contact email.
