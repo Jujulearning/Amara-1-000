@@ -1150,3 +1150,5 @@ h2 em { font-style: italic; font-weight: 400; }
 .footer-connect .connect-icon svg { width: 14px; height: 14px; }
 .footer-connect .connect-list li > .connect-name { font-size: .75rem; }
 .footer-nav ul { grid-template-columns: repeat(2, max-content); grid-template-rows: repeat(5, auto); grid-auto-flow: column; column-gap: clamp(28px, 4vw, 56px); }
+/* Drop cap: sit the letter between the first line's cap height and the second line's baseline, snug to the text */
+.dropcap::first-letter { font-size: 3.45em; line-height: .74; padding: .1em .03em 0 0; }
