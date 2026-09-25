@@ -1235,3 +1235,10 @@ h2 em { font-style: italic; font-weight: 400; }
 .tl-preg .tl-photo img { object-position: 30% 40%; }
 .path-contact .is-soon { display: inline-flex; align-items: center; gap: 6px; font-style: italic; }
 .path-contact .is-soon svg { color: var(--gold); }
+/* Story: larger rectangular photo sitting close to the text */
+@media (min-width: 901px) { .story .story-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 3.5vw, 48px); align-items: center; } }
+.story-photo.arch { margin: 0; width: 100%; max-width: none; aspect-ratio: 3 / 2; border-radius: 6px; }
+.story-photo img { object-position: 50% 50%; }
+@media (max-width: 900px) { .story-photo.arch { margin-top: 0; } .story .story-grid { gap: 28px; } }
+.bio-soon { font-style: italic; color: var(--sage-text) !important; }
+.bio-soon { display: inline-flex; align-items: center; gap: 6px; } .bio-soon svg { color: var(--gold); }
