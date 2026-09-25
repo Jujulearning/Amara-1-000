@@ -132,7 +132,9 @@
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    // threshold 0: an .img-reveal starts fully clipped, so browsers that account for the
+    // element's own clip-path report a 0 ratio; any higher threshold would never fire.
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
