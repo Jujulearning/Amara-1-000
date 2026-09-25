@@ -1129,3 +1129,9 @@ h2 em { font-style: italic; font-weight: 400; }
 .progress .label { color: var(--sage-text); }
 .progress .ms-status { color: var(--terracotta-text) !important; }
 .progress .milestone.is-next .ms-status { color: var(--sage-text) !important; }
+/* Connect list: icon rows, no dividers */
+.connect-list li, .connect-list li:first-child { border-top: 0; grid-template-columns: 36px 84px 1fr; gap: 12px; align-items: center; padding: 10px 0; }
+.connect-icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(250, 246, 239, .1); color: var(--gold); }
+.connect-list li > .connect-name { font-size: .8125rem; font-weight: 500; color: var(--on-olive-muted); }
+.endcap-connect { border-left: 0; }
+@media (max-width: 900px) { .endcap-connect { border-top: 0; padding-top: 0; } }
