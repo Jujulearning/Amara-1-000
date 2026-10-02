@@ -859,7 +859,7 @@ picture { display: contents; }
 .approach .garden { min-height: 300px; }
 .approach .garden-svg { max-width: 420px; }
 
-/* Flora */
+/* Afya */
 .flora-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(48px, 7vw, 112px); align-items: center; }
 .flora-copy .display { color: var(--olive); margin-bottom: 10px; }
 .flora-sub { font-family: var(--serif); font-style: italic; font-size: clamp(1.5rem, 2.4vw, 2.1rem); line-height: 1.25; color: var(--terracotta-text); margin-bottom: 22px; }
@@ -1226,7 +1226,7 @@ h2 em { font-style: italic; font-weight: 400; }
 }
 @media (max-width: 900px) { .progress .milestone.is-done { border-left-color: var(--gold); } }
 .collage-d img { object-position: 62% 50%; }
-/* New Flora screens image carries its own green backdrop: show it edge to edge */
+/* New Afya screens image carries its own green backdrop: show it edge to edge */
 .approach-app { padding: 0; background: none; overflow: hidden; }
 .approach-app img { aspect-ratio: 3 / 2; object-fit: cover; }
 /* Story: the "conflicting advice" scene is wide, so frame it landscape */
@@ -1249,3 +1249,18 @@ h2 em { font-style: italic; font-weight: 400; }
   .js .story-photo.img-reveal { clip-path: inset(0 0 100% 0 round 6px); }
   .js .story-photo.img-reveal.is-visible { clip-path: inset(0 0 0 0 round 6px); }
 }
+
+/* ---------- Partner: demo (coming soon) ---------- */
+.demo { margin-top: clamp(20px, 3vw, 36px); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(28px, 4vw, 56px); align-items: center; background: var(--olive-deep); color: var(--on-olive); border-radius: 24px; padding: clamp(28px, 4vw, 48px); box-shadow: 0 40px 80px -60px rgba(43, 51, 32, .45); --focus: var(--gold); }
+.demo .path-kicker { color: var(--gold); display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.demo .path-title { color: var(--cream); }
+.demo-copy > p:not(.path-kicker) { color: var(--on-olive-muted); margin-bottom: 28px; max-width: 34rem; }
+.demo-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line-light); color: var(--cream); font-size: .7rem; letter-spacing: .14em; }
+.demo-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.demo-soon { --btn-bg: transparent; --btn-fg: rgba(250, 246, 239, .6); --btn-bd: rgba(250, 246, 239, .25); cursor: not-allowed; }
+.demo-soon:hover { transform: none; box-shadow: none; }
+.demo-visual { position: relative; border-radius: 18px; overflow: hidden; }
+.demo-visual img { width: 100%; filter: blur(2px); opacity: .85; transform: scale(1.03); }
+.demo-pill { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; padding: 10px 18px; border-radius: 999px; background: var(--cream); color: var(--olive); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; box-shadow: 0 16px 32px -16px rgba(0, 0, 0, .5); }
+.demo-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+@media (max-width: 900px) { .demo { grid-template-columns: 1fr; } .demo-actions .btn { white-space: normal; text-align: center; } }
