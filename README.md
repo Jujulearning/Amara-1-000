@@ -6,7 +6,7 @@ Static website for Amara Health. No build step and no npm dependencies. The live
 index.html              Home (hero, then the closing banner)
 challenge.html          The Challenge + the science of the first 1,000 days  (/challenge)
 approach.html           Our Approach  (/approach)
-flora.html              Meet Flora  (/flora)
+afya.html              Meet Afya  (/afya)
 story.html              Our Story  (/story)
 founders.html           The Founders  (/founders)
 progress.html           Progress  (/progress)
