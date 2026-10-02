@@ -21,7 +21,7 @@ All other images were supplied by the Amara founders as AI-generated concept ima
 | g-ingredients | cultural-ingredients-concept.webp (sharper version supplied by the founders, Sept 2026) |
 | g-traditional-ingredients | pantry staples table supplied by the founders (Sept 2026) |
 | g-community-meal | new version supplied by the founders (Sept 2026) |
-| g-flora-screens | new Flora concept screens supplied by the founders (Sept 2026) |
+| g-flora-screens | new Afya concept screens supplied by the founders (Sept 2026) |
 | g-meal-bowl | new version supplied by the founders (Sept 2026) |
 | g-mother-baby | mother feeding her baby, supplied by the founders (Sept 2026) |
 | g-newborn | new version supplied by the founders (Sept 2026) |
